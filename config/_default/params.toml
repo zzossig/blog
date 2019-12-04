@@ -18,10 +18,10 @@ archivePaginate = 13
 paginateWindow = 1
 
 # whoami
-myname = "zzossig"
+myname = "쪼식이"
 email = "zzossig@gmail.com"
-whoami = "Programmer"
-useGravatar = true
+whoami = "개발자"
+useGravatar = false
 location = "Seoul, Korea"
 organization = ""
 link = "https://github.com/zzossig/hugo-theme-zzo"

@@ -6,9 +6,9 @@ header:
     paddingY: 0
     align: center
     title:
-      - HUGO
+      - 쪼식이 블로그
     subtitle:
-      - The world’s fastest framework for building websites
+      - 
     titleFontSize: 44
     subtitleFontSize: 16
     spaceBetweenTitleSubtitle: 20
@@ -20,11 +20,9 @@ header:
     paddingY: 0
     align: center
     title:
-      - header title1
-      - header title2
+      - "쪼식이 블로그"
     subtitle:
-      - header subtitle1
-      - header subtitle2
+      -
     titleFontSize: 44
     subtitleFontSize: 16
     spaceBetweenTitleSubtitle: 20
