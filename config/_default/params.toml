@@ -1,6 +1,6 @@
-logoText = "Zzo"
-description = "The Zzo theme for Hugo example site."
-custom_css = []
+logoText = ""
+description = "쪼식이 블로그"
+custom_css = ["scss/custom.scss", "css/font.css"]
 custom_js = []
 
 # header
@@ -20,10 +20,10 @@ paginateWindow = 1
 # whoami
 myname = "zzossig"
 email = "zzossig@gmail.com"
-whoami = "Web Developer"
-useGravatar = false
+whoami = "Programmer"
+useGravatar = true
 location = "Seoul, Korea"
-organization = "Hugo"
+organization = ""
 link = "https://github.com/zzossig/hugo-theme-zzo"
 
 # sidebar

@@ -1,14 +1,14 @@
-baseURL = "http://example.org/"
+baseURL = ""
 title = "Hugo Zzo Theme"
 theme = "zzo"
 
-defaultContentLanguage = "en"
+defaultContentLanguage = "ko"
 defaultContentLanguageInSubdir = true
 hasCJKLanguage = true
 
 summaryLength = 70
 
-copyright = "&copy;{year}, All Rights Reserved"
+copyright = "&copy;{year}, ZZOSSIG All Rights Reserved"
 timeout = 10000
 enableEmoji = true
 paginate = 13
