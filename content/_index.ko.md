@@ -6,21 +6,24 @@ header:
     paddingY: 0
     align: center
     title:
-      - 쪼식이 블로그
+      - HUGO
     subtitle:
-      - 
+      - The world’s fastest framework for building websites
     titleFontSize: 44
     subtitleFontSize: 16
     spaceBetweenTitleSubtitle: 20
   
   - type: img
-    image: images/header/background.jpg
+    imageSrc: images/header/background.png
+    imageSize: contain
+    imageRepeat: no-repeat
+    imagePosition: center
     height: 235
     paddingX: 50
     paddingY: 0
     align: center
     title:
-      - "쪼식이 블로그"
+      -
     subtitle:
       -
     titleFontSize: 44
@@ -33,7 +36,10 @@ header:
       - paddingX: 50
         paddingY: 0
         align: left
-        image: images/header/background.jpg
+        imageSrc: images/header/background.jpg
+        imageSize: cover
+        imageRepeat: no-repeat
+        imagePosition: center
         title:
           - header title1
         subtitle:
@@ -45,7 +51,10 @@ header:
       - paddingX: 50
         paddingY: 0
         align: center
-        image: images/header/background.jpg
+        imageSrc: images/header/background.jpg
+        imageSize: cover
+        imageRepeat: no-repeat
+        imagePosition: center
         title:
           - header title2
         subtitle:
@@ -57,7 +66,10 @@ header:
       - paddingX: 50
         paddingY: 0
         align: right
-        image: images/header/background.jpg
+        imageSrc: images/header/background.jpg
+        imageSize: cover
+        imageRepeat: no-repeat
+        imagePosition: center
         title:
           - header title3
         subtitle:

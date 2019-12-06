@@ -1,6 +1,6 @@
 logoText = ""
 description = "쪼식이 블로그"
-custom_css = ["scss/custom.scss", "css/font.css"]
+custom_css = []
 custom_js = []
 
 # header
@@ -18,9 +18,9 @@ archivePaginate = 13
 paginateWindow = 1
 
 # whoami
-myname = "쪼식이"
+myname = "최성환"
 email = "zzossig@gmail.com"
-whoami = "개발자"
+whoami = "프로그래머"
 useGravatar = false
 location = "Seoul, Korea"
 organization = ""
@@ -44,6 +44,13 @@ showSocialLinks = true
 enableLangChange = true
 enableThemeChange = true
 themeOptions = ["dark", "light", "hacker", "solarized", "custom"]
+
+# service
+baiduAnalytics = ""
+enableBusuanzi = false
+busuanziSiteUV = true
+busuanziSitePV = true
+busuanziPagePV = true
 
 # comment
 enableComment = true
@@ -93,11 +100,11 @@ commento = false
   dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author='true'"
 
 [socialOptions]
-  email = "mailto:your@email.com"
-  facebook = "http://example.org/"
-  twitter = "http://example.org/"
+  email = "mailto:zzossig@gmail.com"
+  facebook = ""
+  twitter = "https://twitter.com/zzossig"
   github = "https://github.com/zzossig/hugo-theme-zzo"
-  stack-overflow = ""
+  stack-overflow = "https://stackoverflow.com/users/11747951/zzossig"
   instagram = ""
   google-plus = ""
   youtube = ""
@@ -108,3 +115,10 @@ commento = false
   stack-exchange = ""
   telegram = ""
   steam = ""
+
+[donationOptions]
+  enable = false
+  alipay = "" 
+  wechat = ""
+  paypal = ""
+  patreon = ""
