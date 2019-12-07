@@ -1,6 +1,6 @@
 ---
-title: "내가 그린 그림"
-date: 2018-10-11T10:20:16+09:00
+title: "Fiverr"
+date: 2019-12-08T00:00:28+09:00
 type: "gallery"
-description: "그림 연습"
+description: "fiverr에서 주문 제작한 그림 모음"
 ---
