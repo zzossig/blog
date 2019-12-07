@@ -2,7 +2,8 @@
 title: "어바웃"
 date: 2019-12-08T00:00:38+09:00
 type: "about"
-description: About Page
+description: 저와 저의 블로그에 대해...
+featured_image: feature1/high-importance.png
 ---
 
 1. 누구세요?
