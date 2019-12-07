@@ -1,0 +1,34 @@
+{{ define "main" }}
+<main class="{{ if $.Param "enableSidebar" }}main-main{{ else }}main{{ end }}">
+  {{ if eq .Site.Params.enableBreadcrumb true }}
+  {{ partial "body/breadcrumb" . }}
+  {{ end }}
+  <div class="single">
+    <h2 class="single__title">{{ .Title }}</h2>
+    <div class="single__meta">
+      {{ partial "body/infos" . }}
+      {{ partial "body/tags" . }}
+    </div>    
+    <article class="single__contents">
+      {{ .Content }}
+    </article>
+    {{ partial "body/donation" . }}
+    {{ partial "body/whoami" . }}
+    {{ partial "body/related" . }}
+    {{ partial "pagination/pagination-single" . }}
+    {{ partial "comments/comments.html" . }}
+    {{ partial "body/photoswipe" . }}
+
+    <div class="hide">
+    {{ partial "search/site-search" . }}
+    </div>
+  </div>
+</main>
+
+{{ if $.Param "enableSidebar" }}
+<aside class="main-side">
+  {{ partial "sidebar/sidebar-single" . }}
+</aside>
+{{ end }}
+{{ partial "script/single-script" . }}
+{{ end }}

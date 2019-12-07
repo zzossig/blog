@@ -1,0 +1,20 @@
+{{ if $.Param "enableSidebar" }}
+{{ if $.Param "enableToc" }}
+
+<section class="sidebar">
+  <div class="toc__flexbox">
+    <h6 class="toc__title">{{ i18n "toc-label" }}</h6>
+    {{ if $.Param "enableTocSwitch" }}
+      <label class="switch">
+        <input id="toggle-toc" aria-label="Toggle TOC" type="checkbox" checked>
+        <span class="slider round"></span>
+      </label>
+    {{ end }}
+  </div>
+  <div class="toc">
+    <ul id="toc"></ul>
+  </div>
+</section>
+
+{{ end }}
+{{ end }}

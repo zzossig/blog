@@ -1,0 +1,30 @@
+{{ define "main" }}
+<main class="{{ if $.Param "enableSidebar" }}main-main{{ else }}main{{ end }}">
+    {{ partial "body/breadcrumb" . }}
+    <article class="list">
+        <header class="list__header">
+            <h4 class="list__header--title h5">{{.Title}}</h1>
+        </header>
+
+        <div class="list__header--desc p2">
+            {{ .Content }}
+        </div>
+
+        <div class="summary__container">
+            {{ $paginator := .Paginate (where .Pages "Type" .Type) }}
+            {{ range $paginator.Pages }}
+                {{ .Render "summary" }}
+            {{ end }}
+        </div>
+    </article>    
+
+    {{ partial "pagination/pagination" . }}
+</main>
+
+{{ if $.Param "enableSidebar" }}
+    <aside class="main-side">
+        {{ partial "sidebar/sidebar-list" . }}
+    </aside>
+{{ end }}
+{{ partial "script/list-script" . }}
+{{ end }}
