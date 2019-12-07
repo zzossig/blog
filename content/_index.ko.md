@@ -1,14 +1,14 @@
 ---
 header:
   - type: text
-    height: 200
+    height: 170
     paddingX: 50
     paddingY: 0
     align: center
     title:
-      - HUGO
+      - 쪼식이 블로그
     subtitle:
-      - The world’s fastest framework for building websites
+      - 
     titleFontSize: 44
     subtitleFontSize: 16
     spaceBetweenTitleSubtitle: 20
