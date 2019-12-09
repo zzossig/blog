@@ -20,7 +20,7 @@ paginateWindow = 1
 # whoami
 myname = "최성환"
 email = "zzossig@gmail.com"
-whoami = "배우면 배울수록 아무것도 아는게 없는것 같은 프로그래머"
+whoami = "성장중인 프로그래머"
 useGravatar = true
 location = "Seoul, Korea"
 organization = ""
