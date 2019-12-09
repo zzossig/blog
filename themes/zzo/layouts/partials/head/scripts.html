@@ -10,17 +10,17 @@
 
 <script>
   // search
-  var runSearch = function() {    
-    {{ $searchLanguages := .Site.Params.searchLanguages }}
-    var searchLanguages = JSON.parse({{ $searchLanguages | jsonify }});
+  var runSearch = function() {
+    {{ $searchLanguage := .Site.Params.searchLanguage }}
+    var searchLanguage = JSON.parse({{ $searchLanguage | jsonify }});
     {{ if .Site.IsMultiLingual }}
         var baseurl = "{{.Site.BaseURL}}{{.Site.LanguagePrefix}}";
     {{ else }}
         var baseurl = "{{.Site.BaseURL}}";
     {{ end }}
 
-    if (!searchLanguages) {
-      searchLanguages = ['en'];
+    if (!searchLanguage) {
+      searchLanguage = "en";
     }
 
     var lunrIndex = null;
@@ -37,11 +37,19 @@
         baseurl = baseurl + '/';
       };
 
-      $.getJSON(baseurl + "index.json")
+      $.ajax({
+        type: "GET",
+        url: baseurl + "index.json",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+      })
         .done(function (index) {
           pagesIndex = index;
           lunrIndex = lunr(function () {
-            this.use(lunr.multiLanguage(...searchLanguages));
+            if (searchLanguage !== "en") {
+              this.use(lunr[searchLanguage]);
+            }
+            
             this.ref('uri');
             this.field('title');
             this.field('description');

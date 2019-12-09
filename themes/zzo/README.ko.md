@@ -251,7 +251,7 @@ enableSidebarCategories = true
 enableToc = true # single page table of contents
 enableTocSwitch = true # single page table of contents visibility switch
 itemsPerCategory = 5 # maximum number of posts shown in the sidebar.
-searchLanguages = ['en'] # lunr multilanguage search. https://github.com/MihaiValentin/lunr-languages
+searchLanguage = "en" # lunr multilanguage search. https://github.com/MihaiValentin/lunr-languages
 
 # footer
 showPoweredBy = true # show footer text: Powered by Hugo and Zzo theme

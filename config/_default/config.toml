@@ -13,9 +13,6 @@ enableEmoji = true
 paginate = 13
 rssLimit = 100
 
-pygmentsOptions = "linenos=table"
-pygmentsUseClasses = true
-
 googleAnalytics = ""
 
 [markup]
@@ -35,6 +32,17 @@ googleAnalytics = ""
       hardWraps = true
       unsafe = true
       xHTML = true
+  [markup.highlight]
+    codeFences = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+    tabWidth = 4
+  [markup.tableOfContents]
+    endLevel = 3
+    startLevel = 2
 
 [outputs]
   home = ["HTML", "RSS", "JSON", "WEBMANIFEST"]

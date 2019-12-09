@@ -35,7 +35,7 @@ enableSidebarCategories = true
 enableToc = true
 enableTocSwitch = true
 itemsPerCategory = 5
-searchLanguages = ['en']
+searchLanguage = "en"
 
 # footer
 showPoweredBy = true
