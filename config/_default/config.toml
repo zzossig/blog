@@ -1,4 +1,4 @@
-baseURL = "blog.zzossig.now.sh"
+baseURL = ""
 theme = "zzo"
 
 defaultContentLanguage = "ko"
