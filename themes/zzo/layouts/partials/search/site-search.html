@@ -11,23 +11,4 @@
   </div>
 </div>
 
-{{ $lunr := resources.Get "js/lunr.min.js" | resources.Fingerprint }}
-<script defer src="{{ $lunr.RelPermalink }}"></script>
-
-{{ $stemmer := .Site.Data.lib.js.stemmer }}
-<script defer src="{{ $stemmer.url }}" integrity="{{ $stemmer.sri }}" crossorigin="anonymous"></script>
-
-{{ $searchLanguage := .Site.Params.searchLanguage }}
-{{ if eq $searchLanguage "ja" }}
-  {{ $tinyseg_ja := resources.Get "js/lunr/tinyseg.ja.js" | resources.Minify | resources.Fingerprint }}
-  <script defer src="{{ $tinyseg_ja.RelPermalink }}"></script>
-  {{ $lunr_ja := resources.Get "js/lunr/lunr.ja.js" | resources.Minify | resources.Fingerprint }}
-  <script defer src="{{ $lunr_ja.RelPermalink }}"></script>
-{{ else if ne $searchLanguage "en" }}
-  {{ with (index .Site.Data.lib.lunr $searchLanguage) }}  
-    {{ printf "%#v" .code }}
-    <script defer src="{{ .url }}" integrity="{{ .sri }}" crossorigin="anonymous"></script>
-  {{ end }}
-{{ end }} 
-
 {{ end }}
