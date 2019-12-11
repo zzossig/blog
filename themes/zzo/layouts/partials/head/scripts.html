@@ -15,7 +15,7 @@
   // search
   var runSearch = function() {
     {{ if .Site.IsMultiLingual }}
-        var baseurl = "{{.Site.LanguagePrefix}}";
+        var baseurl = "/{{.Site.LanguagePrefix}}";
     {{ else }}
         var baseurl = "/";
     {{ end }}
