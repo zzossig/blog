@@ -15,16 +15,23 @@
   // search
   var runSearch = function() {
     {{ if .Site.IsMultiLingual }}
-        var baseurl = "/{{.Site.LanguagePrefix}}";
+        var baseurl = `${location.hostname}/{{.Site.LanguagePrefix}}`;
     {{ else }}
-        var baseurl = "/";
+        var baseurl = `${location.hostname}`;
     {{ end }}
     
     var searchResults = null;
     var searchMenu = null;
     var fuse = null;
 
+    function endsWith(str, suffix) {
+      return str.indexOf(suffix, str.length - suffix.length) !== -1;
+    }
+
     function initFuse() {
+      if (!endsWith(baseurl, "/")) {
+        baseurl = baseurl + '/';
+      };
 
       $.ajax({
         type: "GET",
