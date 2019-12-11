@@ -20,7 +20,7 @@ paginateWindow = 1
 # whoami
 myname = "최성환"
 email = "zzossig@gmail.com"
-whoami = "성장중인 프로그래머"
+whoami = "📚Learner🤓Nerd🌐Web Developer"
 useGravatar = true
 location = "Seoul, Korea"
 organization = ""
@@ -42,7 +42,7 @@ showFeedLinks = true
 showSocialLinks = true
 enableLangChange = true
 enableThemeChange = true
-themeOptions = ["light", "dark", "hacker", "solarized", "custom"]
+themeOptions = ["dark", "light", "hacker", "solarized", "custom"]
 
 # service
 baiduAnalytics = ""

@@ -1,6 +1,6 @@
 +++
 title = "노트"
-author = "Hugo Authors"
+author = "zzossig"
 tags = ["index"]
 description = "Note page"
 +++

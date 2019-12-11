@@ -7,8 +7,8 @@
     <title>{{ block "title" . }}{{ .Title }} – {{ .Site.Title }}{{ end }}</title>
     {{ partial "head/scripts" . }}    
     {{ partialCached "head/styles" . }}
-    {{ partialCached "head/meta" . }}
-    {{ partialCached "head/meta_json_ld" . }}
+    {{ partial "head/meta" . }}
+    {{ partial "head/meta_json_ld" . }}
     {{ partial "head/services" . }}
     {{ partial "head/custom-head" . }}
 </head>
