@@ -1,5 +1,5 @@
 ---
-title: "휴고 Zzo 테마 제작기"
+title: "휴고로 블로그를 만들면 좋은 이유(장, 단점)"
 date: 2019-12-11T12:13:55+09:00
 description: 휴고 테마를 만들었습니다. 많이 이용해주세요😁
 tags:
@@ -8,6 +8,11 @@ series:
 - hugo
 categories:
 -
+keywords:
+- hugo
+- 휴고
+- hugo theme
+- 휴고 테마
 featured_image: feature1/web.png
 ---
 
