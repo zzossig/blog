@@ -1,5 +1,6 @@
 {
   "scripts": {
-    "build": "hugo"
+    "build": "hugo",
+    "version": "0.61.0"
   }
 }
