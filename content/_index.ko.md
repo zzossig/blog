@@ -14,16 +14,16 @@ header:
     spaceBetweenTitleSubtitle: 20
   
   - type: img
-    imageSrc: images/header/background.png
-    imageSize: contain
+    imageSrc: images/header/background.svg
+    imageSize: cover
     imageRepeat: no-repeat
     imagePosition: center
-    height: 235
+    height: 335
     paddingX: 50
     paddingY: 0
     align: center
     title:
-      -
+      - 
     subtitle:
       -
     titleFontSize: 44
