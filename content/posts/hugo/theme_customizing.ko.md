@@ -1,7 +1,7 @@
 ---
 title: "휴고 테마 커스터마이징 하기"
 date: 2019-12-13T09:24:21+09:00
-description: 휴고 테마 디렉토리는 안건드시는게 좋습니다.
+description: 휴고에서 테마 커스터마이징 하기 추천 방법
 tags:
 - hugo
 series:

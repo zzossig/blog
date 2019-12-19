@@ -32,9 +32,4 @@
   name = "노트"
   url = "notes"
   weight = 5
-
-[[main]]
-  identifier = "contact"
-  name = "컨택"
-  url = "contact"
-  weight = 6
+  

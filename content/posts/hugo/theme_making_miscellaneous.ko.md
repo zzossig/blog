@@ -1,7 +1,7 @@
 ---
 title: "휴고 테마 제작 잡설"
 date: 2019-12-12T10:18:07+09:00
-description: 오픈소스 처음 만들면서 느낀점
+description: 쪼띰 만들면서 느낀점
 tags:
 - hugo
 series:
