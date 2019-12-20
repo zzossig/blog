@@ -1,5 +1,5 @@
 ---
-title: "Webpack이란"
+title: "Webpack이란?"
 date: 2019-12-19T09:23:51+09:00
 description: Webpack이 필요한 이유와 기능 살펴보기.
 tags:
@@ -7,7 +7,7 @@ tags:
 series:
 - webpack
 categories:
--
+- 란?
 featured_image: "feature1/webpack.png"
 ---
 
