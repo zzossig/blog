@@ -13,7 +13,7 @@ enableEmoji = true
 paginate = 13
 rssLimit = 100
 
-googleAnalytics = ""
+googleAnalytics = "G-L0TJ5JRYEQ"
 
 [markup]
   [markup.goldmark]
