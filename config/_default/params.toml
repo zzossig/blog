@@ -54,7 +54,7 @@ busuanziPagePV = true
 # comment
 enableComment = true
 disqus_shortname = ""
-commento = true
+commento = false
 
 [gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
   owner = ""              # Your GitHub ID
@@ -63,8 +63,8 @@ commento = true
   clientSecret = ""       # Your client secret
 
 [utterances]       # https://utteranc.es/
-  owner = ""              # Your GitHub ID
-  repo = ""               # The repo to store comments
+  owner = "zzossig"              # Your GitHub ID
+  repo = "blog"               # The repo to store comments
 
 [gitalk]           # Gitalk is a comment system based on GitHub issues. see https://github.com/gitalk/gitalk
   owner = ""              # Your GitHub ID
