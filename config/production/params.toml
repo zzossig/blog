@@ -1,5 +1,5 @@
-logoText = "Zzo theme"
-description = "The Zzo theme for Hugo example site."
+logoText = "Zzo blog"
+description = "쪼식이 블로그"
 custom_css = []
 custom_js = []
 
@@ -18,12 +18,12 @@ archivePaginate = 13
 paginateWindow = 1
 
 # whoami
-myname = "zzossig"
+myname = "최성환"
 email = "zzossig@gmail.com"
-whoami = "Web Developer"
-useGravatar = false
+whoami = "📚Learner🤓Nerd🌐Web Developer"
+useGravatar = true
 location = "Seoul, Korea"
-organization = "Hugo"
+organization = ""
 link = "https://zzossig.io/ko"
 
 # sidebar
@@ -63,8 +63,8 @@ commento = false
   clientSecret = ""       # Your client secret
 
 [utterances]       # https://utteranc.es/
-  owner = ""              # Your GitHub ID
-  repo = ""               # The repo to store comments
+  owner = "zzossig"              # Your GitHub ID
+  repo = "blog"               # The repo to store comments
 
 [gitalk]           # Gitalk is a comment system based on GitHub issues. see https://github.com/gitalk/gitalk
   owner = ""              # Your GitHub ID
@@ -99,11 +99,11 @@ commento = false
   dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author='true'"
 
 [socialOptions]
-  email = "mailto:your@email.com"
-  facebook = "http://example.org/"
-  twitter = "http://example.org/"
+  email = "mailto:zzossig@gmail.com"
+  facebook = ""
+  twitter = "https://twitter.com/zzossig"
   github = "https://github.com/zzossig/hugo-theme-zzo"
-  stack-overflow = ""
+  stack-overflow = "https://stackoverflow.com/users/11747951/zzossig"
   instagram = ""
   google-plus = ""
   youtube = ""
