@@ -114,6 +114,7 @@ commento = false
   stack-exchange = ""
   telegram = ""
   steam = ""
+  weibo = ""
 
 [donationOptions]
   enable = false
