@@ -2,7 +2,6 @@
 title: "빅오 표기법(Big-O) 이란?"
 date: 2019-12-23T11:58:22+09:00
 description: 빅오 표기법, 시간복잡도, 공간복잡도
-draft: true
 tags:
 - algorithm
 series:

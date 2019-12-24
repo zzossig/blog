@@ -14,7 +14,7 @@ header:
     spaceBetweenTitleSubtitle: 20
   
   - type: img
-    imageSrc: images/header/background.svg
+    imageSrc: images/header/background.jpg
     imageSize: cover
     imageRepeat: no-repeat
     imagePosition: center
