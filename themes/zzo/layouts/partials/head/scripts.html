@@ -17,16 +17,17 @@
   var runSearch = function() {
     {{ if .Site.IsMultiLingual }}
         var isSubDirDisabled = location.pathname.startsWith("/{{.Site.Language.Lang}}");
-      
-        if (isSubDirDisabled) {
-          baseurl = location.origin;
+        if (isSubDirDisabled) {          
+          baseurl = location.origin + "/{{.Site.Language.Lang}}";          
         } else {
-          baseurl = location.origin + "/{{.Site.Language.Lang}}";
+          baseurl = location.origin;
         }
     {{ else }}
         baseurl = location.origin;
     {{ end }}
     
+console.log(baseurl);
+
     var searchResults = null;
     var searchMenu = null;
     var fuse = null;
