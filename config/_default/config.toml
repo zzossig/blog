@@ -2,7 +2,7 @@ baseURL = ""
 theme = "zzo"
 
 defaultContentLanguage = "ko"
-defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
 hasCJKLanguage = true
 
 summaryLength = 70
