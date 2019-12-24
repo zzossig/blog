@@ -24,7 +24,7 @@ whoami = "📚Learner🤓Nerd🌐Web Developer"
 useGravatar = true
 location = "Seoul, Korea"
 organization = ""
-link = "https://zzossig.io/ko"
+link = "https://zzossig.io"
 
 # sidebar
 enableBio = true
