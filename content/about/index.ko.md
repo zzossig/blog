@@ -2,7 +2,6 @@
 title: "About"
 date: 2019-12-08T00:00:38+09:00
 type: "about"
-draft: true
 description: 저와 이 블로그에 대해...
 featured_image: feature1/high-importance.png
 ---
