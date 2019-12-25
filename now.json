@@ -5,6 +5,12 @@
     "zzossig.io",
     "zzossig"
   ],
+  "redirects": [
+    {
+      "source": "/ko",
+      "destination": "/"
+    }
+  ],
   "github": {
     "enabled": true
   },
