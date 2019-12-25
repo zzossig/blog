@@ -118,6 +118,8 @@ commento = false
   douban = ""
   csdn = ""
   zhihu = ""
+  gitlab = ""
+  mastodon = ""
 
 [donationOptions]
   enable = false

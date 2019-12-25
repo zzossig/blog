@@ -7,7 +7,7 @@ hasCJKLanguage = true
 
 summaryLength = 70
 
-copyright = "&copy;{year}, ZZOSSIG All Rights Reserved"
+copyright = "&copy;{year}, ZZoSSig All Rights Reserved"
 timeout = 10000
 enableEmoji = true
 paginate = 13
