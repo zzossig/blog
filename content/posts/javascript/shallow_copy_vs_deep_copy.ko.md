@@ -12,7 +12,7 @@ featured_image: feature2/copy.png
 ---
 
 기본적으로 자바스크립트에서 깊은 복사, 얕은 복사를 논할 때는 object나 array 같은 reference type을 다룬다는 전제를 깔고 들어간다.
- primitive type에는 string, boolean, number 등이 있고, 항상 메모리 값을 복사하기 때문에 참조관계를 전혀 신경 쓸 필요가 없다. 반면 reference type에 값을 할당할 때, 깊은 복사냐, 얕은 복사냐에 따라 행동이 달라질 수 있기 때문에, 이 내용을 알고 있어야 한다.
+ primitive type에는 String, Boolean, Number, Null, Undefined 등이 있고, 항상 메모리 값을 복사하기 때문에 참조관계를 전혀 신경 쓸 필요가 없다. 반면 reference type에 값을 할당할 때, 깊은 복사냐, 얕은 복사냐에 따라 행동이 달라질 수 있기 때문에, 이 내용을 알고 있어야 한다.
 
 ## Primitive type
 
