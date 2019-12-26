@@ -13,7 +13,7 @@ featured_image: feature2/hand-cursor.png
 
 ## 전역 범위
 
-this는 아무런 코드블럭도 없을 때는, window객체를 가르킨다.
+this는 아무런 코드블럭도 없을 때는, window객체를 가리킨다.
 
 ```javascript
 console.log(this); // Window {}
@@ -30,7 +30,7 @@ console.log(a); // 1
 
 ## 함수 범위
 
-다음과 같이 함수 안에 this를 사용했을 땐, window 객체를 가르킨다.
+다음과 같이 함수 안에 this를 사용했을 땐, window 객체를 가리킨다.
 
 ```javascript
 function myFunc() {
@@ -39,7 +39,7 @@ function myFunc() {
 myFunc(); 
 ```
 
-반면, 다음의 this 키워드는 myFunc 함수가 정의된 obj를 가르킨다.
+반면, 다음의 this 키워드는 myFunc 함수가 정의된 obj를 가리킨다.
 
 ```javascript
 var obj = {
@@ -50,7 +50,7 @@ var obj = {
 obj.myFunc(); 
 ```
 
-주의할 점은, 다음과 같이 함수를 호출할 때는, window 객체를 가르킨다.
+주의할 점은, 다음과 같이 함수를 호출할 때는, window 객체를 가리킨다.
 
 ```javascript
 var obj = {
@@ -67,7 +67,7 @@ func();
 
 ## 함수 안의 함수
 
-다음과 같이 함수안의 함수에 this키워드를 쓰면, window 객체를 가르킨다.
+다음과 같이 함수안의 함수에 this키워드를 쓰면, window 객체를 가리킨다.
 
 ```javascript
 var obj = {
@@ -128,10 +128,10 @@ obj.myFunc();
 
 ## 정리
 
-- this가 전역 문맥에서 사용되었다면, Window객체를 가르킨다.
-- this가 함수 안에서는 Window 객체를 가르킨다.
-- this가 객체 안의 함수에서는 해당 객체를 가르킨다.
-- this가 함수 안의 함수에서는 Window객체를 가르킨다.
+- this가 전역 문맥에서 사용되었다면, Window객체를 가리킨다.
+- this가 함수 안에서는 Window 객체를 가리킨다.
+- this가 객체 안의 함수에서는 해당 객체를 가리킨다.
+- this가 함수 안의 함수에서는 Window객체를 가리킨다.
 - this가 strict 모드 일 때, 함수 안의 함수에서는 undefined다.
 - this가 사용되는 문맥에 따라 결과값이 달라질 수 있기 때문에, 이를 안전하게 사용하기 위한 기법이 존재한다.
 

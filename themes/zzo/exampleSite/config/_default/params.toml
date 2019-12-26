@@ -128,3 +128,9 @@ commento = false
   wechat = ""
   paypal = ""
   patreon = ""
+
+[copyrightOptions]
+  enableCopyrightLink = false
+  copyrightLink = ""
+  copyrightLinkImage = ""
+  copyrightLinkText = ""
