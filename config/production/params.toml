@@ -33,6 +33,7 @@ enableSidebarTags = true
 enableSidebarSeries = true
 enableSidebarCategories = true
 enableToc = true
+hideToc = false
 enableTocSwitch = true
 itemsPerCategory = 5
 

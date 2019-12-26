@@ -14,11 +14,11 @@ header:
     spaceBetweenTitleSubtitle: 20
   
   - type: img
-    imageSrc: images/header/background.jpg
-    imageSize: cover
+    imageSrc: images/header/zblg.png
+    imageSize: initial
     imageRepeat: no-repeat
     imagePosition: center
-    height: 335
+    height: 170
     paddingX: 50
     paddingY: 0
     align: center
