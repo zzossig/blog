@@ -7,7 +7,7 @@ hasCJKLanguage = true
 
 summaryLength = 70
 
-copyright = "©{year}, ZZoSSig All Rights Reserved"
+copyright = "모든 내용은 {}의 라이센스에 따릅니다."
 timeout = 10000
 enableEmoji = true
 paginate = 13
