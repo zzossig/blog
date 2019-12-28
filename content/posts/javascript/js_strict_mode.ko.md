@@ -1,5 +1,5 @@
 ---
-title: "Javascript strict mode에 대해"
+title: "자바스크립트 strict mode에 대해"
 date: 2019-12-23T12:13:19+09:00
 description: strict mode 쓰는법과 이유
 tags:
