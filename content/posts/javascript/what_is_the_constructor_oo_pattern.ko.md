@@ -13,7 +13,7 @@ featured_image: feature3/construction.png
 
 ## 자바스크립트에서 생성자(constructor)의 의미
 
-자바스크립트에서의 생성자는 <U>다른 객체지향 언어의 문법을 흉내</U>낼 뿐이다. 자바스크립트에서 상속은 프로토타입을 통해서만 이루어진다.
+자바스크립트에서의 생성자 패턴은 `new`키워드로 객체를 만드는 것을 말하는데, 생성자는 문법적인 편리함을 제공하고 <U>다른 객체지향 언어를 흉내</U>낼 뿐이다.
 
 ## 자바스크립트 new 키워드
 
@@ -68,7 +68,7 @@ new로 생성하는 객체에 메서드를 다음과 같이 추가할 수 있다
 function Person(firstname, lastname) {
   this.firstname = firstname;
   this.lastname = lastname;
-  this.fullname = function() {
+  this.fullname = function() { // 메서드 추가
     return this.firstname + ' ' + this.lastname;
   }
 }
@@ -78,7 +78,7 @@ console.log(dude.fullname()); // choi zzossig
 
 함수의 프로토타입은 객체의 프로토타입과 성질은 같고, 이름은 다르다.
 
-모든 자바스크립트 Object는 `__proto__`객체를 지니고 있고, 이것이 그 객체의 프로토타입이 된다. 만약 생성자 함수에 함수를 정의하게 되면, 그 함수는 `prototype`이라는 이름의 객체 안에 들어가게 된다.
+모든 자바스크립트 Object는 `__proto__`객체를 지니고 있고, 이것이 그 객체의 프로토타입이 된다. 객체 안에 함수를 정의하게 되면, 그 함수는 `prototype`이라는 이름의 객체 안에 들어가게 된다.
 
 |  dude 	|  Person 	|  Object 	|
 |---	|---	|---	|
@@ -86,7 +86,7 @@ console.log(dude.fullname()); // choi zzossig
 |  zzossig 	|  lastname 	|  `__proto__` 	|
 |  `__proto__` 	|  `prototype` 	|   	|
 
-이 표에서 Person의 prototype객체는 특정 Object를 가리키게 된다. 이 Object가 Person 함수에서 정의한 메서드들을 모아두는 Object이다. dude객체는 Person 함수로 만들어진 객체이므로, Person의 프로토타입이 가리키는 특정 Object를 dude또한 가리키게 된다.
+이 표에서 Person<U>함수</U>의 prototype객체는 특정 Object를 가리키게 된다. 이 Object가 Person 함수에서 정의한 메서드들을 모아두는 Object이다. dude객체는 Person 함수로 만들어진 객체이므로, Person의 프로토타입이 가리키는 특정 Object를 dude또한 가리키게 된다(즉, dude와 Person의 프로토타입이 같다).
 
 이렇듯, Person함수로 만들어진 객체는 모두 같은 프로토타입 객체를 공유하게 된다.
 

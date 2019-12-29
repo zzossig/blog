@@ -2,7 +2,6 @@
 title: "자바스크립트의 call, apply, bind 함수 호출"
 date: 2019-12-26T12:00:24+09:00
 description: call, apply, bind함수는 언제쓰고 왜쓰는지
-draft: true
 tags:
 - javascript
 series:
@@ -43,7 +42,7 @@ featured_image: feature3/three-triangles.png
 
 ### 생성자로 함수 호출
 
-자바나 C등의 언어를 배운 사람들은 클래스 안에서 this라는 키워드를 사용해보거나 본 적이 있을 것이다. 자바스크립트에서는 이 this라는 키워드를 함수 안에서 쓸 수 있다. 함수의 this 키워드는, 함수로 객체를 만들 때 해당 객체의 context로 사용된다.
+자바나 C++등의 언어를 배운 사람들은 클래스 안에서 this라는 키워드를 사용해보거나 본 적이 있을 것이다. 자바스크립트에서는 이 this라는 키워드를 함수 안에서 쓸 수 있다. 함수의 this 키워드는, 함수로 객체를 만들 때 해당 객체의 context로 사용된다.
 
 ```javascript
 function myFunc() {
@@ -76,7 +75,7 @@ myFunc.apply();
 
 이것은 함수의 this키워드가 문맥에 따라 다르게 해석될 수 있기 때문에(참고: [자바스크립트 this에 대한 이해](/posts/javascript/what_does_the_this_keyword_mean)), call이나 apply를 통해 함수를 호출하면 이 문맥을 정확하게 할 수 있기 때문이다.
 
-다음 코드는 `strict`모드의 여하에 따라 this의 문맥이 달라지는 것을 보여준다.
+다음 코드는 `strict`모드의 여부에 따라 this의 문맥이 달라지는 것을 보여준다.
 
 ```javascript
 // 다음의 this는 window객체를 가리킨다.
