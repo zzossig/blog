@@ -1,12 +1,10 @@
 <footer class="footer">
     {{ partial "footer/select-lang" . }}
     {{ partial "footer/go-to-top" . }}
-
-    {{ if $.Param "showPoweredBy" }}
+    
     <div class="footer__poweredby">
     {{ partial "footer/site-counter" . }}
-
-        {{ if $.Site.Copyright }}        
+        {{ if $.Site.Copyright }}
             <p class="caption">
                 {{ if $.Site.Params.copyrightOptions.enableCopyrightLink }}
                     {{ $leftString := replace (index (split $.Site.Copyright "{}") 0) "{year}" now.Year }}
@@ -22,7 +20,9 @@
                 {{ end }}
             </p>
         {{ end }}
-        <p class="caption">Powered by <a href="https://gohugo.io/" rel="noreferrer">Hugo</a> and the <a href="https://github.com/zzossig/hugo-theme-zzo" rel="noreferrer">Zzo theme</a></p>
+
+        {{ if $.Param "showPoweredBy" }}
+            <p class="caption">Powered by <a href="https://gohugo.io/" rel="noreferrer">Hugo</a> and the <a href="https://github.com/zzossig/hugo-theme-zzo" rel="noreferrer">Zzo theme</a></p>
+        {{ end }}
     </div>
-    {{ end }}    
 </footer>

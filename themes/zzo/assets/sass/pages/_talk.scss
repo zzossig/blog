@@ -1,0 +1,79 @@
+.talk {
+  &__li {
+    margin-bottom: 0.5rem;
+    margin-left: 4rem;
+    margin-top: 0.5rem;
+    z-index: 0;    
+
+    @include transition(margin-left, 0.1s, ease);
+    @include flexbox();
+    @include align-items(flex-start);
+
+    @media only screen and (max-width: 769px) {
+      margin-left: 0;
+      position: relative;
+    }
+  }
+
+  &__meta {
+    border-radius: 0.25rem;
+    min-width: 100px;
+    max-width: 100px;
+    margin-top: 0.25rem;
+
+    @include flexbox();
+    @include align-items(center);
+    @include animation('slide-in-left .2s .5s 1 ease both');
+  }
+
+  &__title {
+    @include truncate($grid-max-width);
+    @include on-event {
+      &::before {
+        content: '';
+        position: absolute;
+        left: 3rem;                
+        width: 0.25rem;
+        height: 20px;
+        line-height: 20px;
+        
+        @include themify($themes) {
+          background-color: themed('archive-hover-line-color');
+        }
+
+        @media only screen and (max-width: 769px) {
+          top: 5px;
+        }
+      }
+    }
+
+    &--margin {
+      margin-right: 0.5rem;  
+      margin-left: 1rem;
+    }
+  }
+
+  &__links {
+    @include flexbox();
+    @include flex-direction(column);
+
+    li {
+      text-indent: -0.35em;
+      padding-left: 0.5em;
+      
+      &::before {
+        padding-right: 0.25rem;
+        margin-left: 2.5rem;
+        font-size: 1rem;
+        display: inline-block;
+        content: "\2022";
+      }
+
+      @include truncate(650px);
+      @media only screen and (max-width: 769px) {
+        margin-left: -5.55rem;
+        @include truncate(350px);
+      }
+    }
+  }
+}
