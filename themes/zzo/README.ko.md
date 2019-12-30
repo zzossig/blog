@@ -226,6 +226,7 @@ enableThemeChange = true # site color theme
 enableBreadcrumb = true # breadcrumb for list, single page
 enablePhotoSwipe = true # image viewer for gallery, single page
 enableSearch = true # site search with fuse
+enableSearchHighlight = true # when true, search keyword will be highlighted
 enableGoToTop = true # scroll to top
 enableWhoami = true # at the end of single page
 summaryShape = "classic" # card, classic, compact

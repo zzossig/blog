@@ -8,6 +8,7 @@ homeHeaderType = "text" # text, img, slide
 enableBreadcrumb = true
 enablePhotoSwipe = true
 enableSearch = true
+enableSearchHighlight = true
 enableGoToTop = true
 enableWhoami = true
 summaryShape = "classic" # card, classic, compact
