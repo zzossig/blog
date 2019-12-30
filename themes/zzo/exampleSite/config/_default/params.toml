@@ -122,6 +122,8 @@ commento = false
   zhihu = ""
   gitlab = ""
   mastodon = ""
+  jianshu = ""
+  zhihu = ""
 
 [donationOptions]
   enable = false

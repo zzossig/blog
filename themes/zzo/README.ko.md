@@ -92,7 +92,7 @@ config.toml 파일이 보이신다면, 과감하게 지워주세요. 아래 단�
 모두 그냥 복사, 붙여넣기 해서 파일을 만드시면 되는데, 귀찮으신 분들은 exampleSite 폴더에 있는 config 폴더를
 루트 디렉토리에 그냥 복사 붙여넣기 하셔도 됩니다.
  
-아래는 설정 파일 구조구요.
+아래는 설정 파일 구조구요. _default폴더의 _(언더스코어) 뺴먹지 마세요!
 
 ```bash
 root
@@ -337,6 +337,8 @@ commento = false
   zhihu = ""
   gitlab = ""
   mastodon = ""
+  jianshu = ""
+  zhihu = ""
 
 [donationOptions] 
   enable = false # if set, the donation button will show up on the single page.
@@ -826,6 +828,10 @@ copyright = This is my {} copyright text
   copyrightLinkImage = "https://..."
   copyrightLinkText = "copyright link text"
 ```
+
+### custom favicon
+
+root/static 폴더에 파비콘을 넣어서 테마의 favicon을 overriding 하시면 됩니다.
 
 ## External Library
 

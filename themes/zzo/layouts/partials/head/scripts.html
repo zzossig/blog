@@ -55,7 +55,7 @@
             keys: ['title', 'description', 'content'],
             includeMatches: enableSearchHighlight,
             shouldSort: true,
-            threshold: 0.6,
+            threshold: 0.8,
             location: 0,
             distance: 100,
             maxPatternLength: 32,
@@ -99,8 +99,7 @@
       searchMenu.appendChild(content);
     }
 
-    function renderSearchHighlightResults(results) {
-      //console.log(results);
+    function renderSearchHighlightResults(results) {      
       searchResults = document.getElementById('search-results');
       searchMenu = document.getElementById('search-menu');
       searchResults.setAttribute('class', 'dropdown is-active');
@@ -110,11 +109,10 @@
 
       if (results.length > 0) {
         results.forEach(function (result) {
-          console.log(result);
           var item = document.createElement('a');
           item.setAttribute('href', result.item.uri);
           item.setAttribute('class', 'dropdown-item');
-          item.innerHTML = `<div class="menu-item"><div class="menu-item__title">📄 ${generateHighlightedText(result.item.title, result.matches[0].indices)}</div><div class="menu-item__desc">${result.item.description ? generateHighlightedText(result.item.description, result.matches[0].indices) : generateHighlightedText(result.item.content, result.matches[0].indices)}</div></div>`;
+          item.innerHTML = `<div class="menu-item"><div class="menu-item__title">📄 ${generateHighlightedText(result.item.title, result.matches[0].indices)}</div><div class="menu-item__desc">${result.matches[1] ? generateHighlightedText(result.item.description, result.matches[1].indices) : result.matches[2] ? generateHighlightedText(result.item.content, result.matches[2].indices) : ''}</div></div>`;
           content.appendChild(item);
         });
       } else {
@@ -161,10 +159,10 @@
       content.setAttribute('class', 'mobile-search__content');
 
       if (results.length > 0) {
-        results.forEach(function (result) {          
+        results.forEach(function (result) {
           var item = document.createElement('a');
           item.setAttribute('href', result.item.uri);
-          item.innerHTML = `<div class="mobile-search__item"><div class="mobile-search__item--title">📄 ${generateHighlightedText(result.item.title, result.matches[0].indices)}</div><div class="mobile-search__item--desc">${result.item.description ? generateHighlightedText(result.item.description, result.matches[0].indices) : generateHighlightedText(result.item.content, result.matches[0].indices)}</div></div>`;
+          item.innerHTML = `<div class="mobile-search__item"><div class="mobile-search__item--title">📄 ${generateHighlightedText(result.item.title, result.matches[0].indices)}</div><div class="mobile-search__item--desc">${result.matches[1] ? generateHighlightedText(result.item.description, result.matches[1].indices) : result.matches[2] ? generateHighlightedText(result.item.content, result.matches[2].indices) : ''}</div></div>`;
           content.appendChild(item);
         });
       } else {
@@ -178,17 +176,17 @@
 
     function generateHighlightedText(text, regions) {
       if(!regions) return text;
-
+      
       var content = '', nextUnhighlightedRegionStartingIndex = 0;
 
       regions.forEach(function(region) {
         content += '' +
           text.substring(nextUnhighlightedRegionStartingIndex, region[0]) +
           '<span class="search__highlight">' +
-            text.substring(region[0], region[1]) +
+            text.substring(region[0], region[1] + 1) +
           '</span>' +
         '';
-        nextUnhighlightedRegionStartingIndex = region[1];
+        nextUnhighlightedRegionStartingIndex = region[1] + 1;
       });
 
       content += text.substring(nextUnhighlightedRegionStartingIndex);

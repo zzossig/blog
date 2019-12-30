@@ -84,7 +84,7 @@ hugo server --themesDir ../..
 
 0. From the root of your site: delete config.toml file and add the files below
 
-1. config folder structure
+1. config folder structure. Keep in mind the underscore on the `_default` folder
 
 ```bash
 root
@@ -329,6 +329,8 @@ commento = false
   zhihu = ""
   gitlab = ""
   mastodon = ""
+  jianshu = ""
+  zhihu = ""
 
 [donationOptions] 
   enable = false # if set, the donation button will show up on the single page.
@@ -551,7 +553,7 @@ It's a better idea not to modify the Zzo theme's folder if you want future suppo
 
 ### custom css
 
-1. Add this line of code to your params.toml file
+1. Add this line of code to your params.toml file.
 
 ```bash
 config/_default/params.toml
@@ -582,7 +584,7 @@ assets/scss/custom.scss or assets/css/custom.css
 
 ### custom js
 
-1. Add this line of code to your params.toml file
+1. Add this line of code to your params.toml file.
 
 ```bash
 config/_default/params.toml
@@ -823,6 +825,10 @@ The {} part will be your copyright link.
   copyrightLinkImage = "https://..."
   copyrightLinkText = "copyright link text"
 ```
+
+### custom favicon
+
+Override the default favicon by adding your favicon at root/static folder
 
 ## External Library
 
