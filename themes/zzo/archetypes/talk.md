@@ -8,7 +8,8 @@ series:
 -
 categories:
 -
-videoLink: 
-pptLink:
-eventLink:
+links:
+  - link: ""
+    title: ""
+    type: ""
 ---

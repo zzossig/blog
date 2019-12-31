@@ -13,7 +13,7 @@ enableGoToTop = true
 enableWhoami = true
 summaryShape = "classic" # card, classic, compact
 archiveGroupByDate = "2006" # "2006-01": group by month, "2006": group by year
-archivePaginate = 13
+archivePaginate = 20
 paginateWindow = 1
 talksGroupByDate = "2006"
 
@@ -64,8 +64,6 @@ enableComment = false
   twitter = "https://twitter.com/zzossig"
   github = "https://github.com/zzossig/hugo-theme-zzo"
   stack-overflow = "https://stackoverflow.com/users/11747951/zzossig"
-  jianshu = ""
-  zhihu = ""
   
 [copyrightOptions]
   enableCopyrightLink = true

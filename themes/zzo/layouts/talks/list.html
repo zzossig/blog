@@ -18,9 +18,8 @@
     <ul class="archive__ul">
       {{ range .Pages }}
       <li class="talk__li">
-        <span class="talk__meta">
-          <span class="archive__type">{{ .Type }}</span>
-          <span class="archive__date">{{ .Date.Format (i18n "archive-dateformat") }}</span>
+        <span class="talk__date">
+          {{ .Date.Format (i18n "talks-dateformat") }}
         </span>
         <ul>
           <li>
@@ -28,15 +27,12 @@
           </li>
           <li class="talk__links">
             <ul>
-              <li>
-                <a href="{{ .Params.videoLink }}" class="talk__title p2">{{ .Title }}</a>
-              </li>
-              <li>
-                <a href="{{ .Params.pptLink }}" class="talk__title p2">{{ .Title }}</a>
-              </li>
-              <li>
-                <a href="{{ .Params.eventLink }}" class="talk__title p2">{{ .Title }}</a>
-              </li>
+              {{ range .Params.links }}
+                <li class="talk__links--li">           
+                  <span class="talk__type">{{ .type | default "talks" }}</span>
+                  <a href="{{ .link | safeURL }}" title="{{ .link }}" target="_blank" rel="noreferrer" class="talk__title talk__title--margin p2">{{ .title | default .link }}</a>
+                </li>
+              {{ end }}
             </ul>
           </li>
         </ul>

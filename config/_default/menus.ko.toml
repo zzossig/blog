@@ -32,9 +32,3 @@
   name = "노트"
   url = "notes"
   weight = 5
-
-[[main]]
-  identifier = "talks"
-  name = "토크"
-  url = "talks"
-  weight = 7

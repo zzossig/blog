@@ -18,6 +18,7 @@ Thank you for click me!. Zzo theme is a blog theme powered by Hugo with free(alw
 * [Layout](#layout)
 * [Gallery](#gallery)
 * [Contact Page](#contact-page)
+* [Talks Page](#talks-page)
 * [Multi Language](#multi-language)
 * [Customizing](#customizing)
 * [External libraries](#external-library)
@@ -38,6 +39,7 @@ Thank you for click me!. Zzo theme is a blog theme powered by Hugo with free(alw
 * Search with Fuse
 * Gallery with Masonry, Photoswipe
 * Fast code highlighting
+* Talks page for external links
 
 ## Minimum Hugo version
 
@@ -483,6 +485,59 @@ This is contact page.
   url = "contact"
   weight = 6
 ```
+
+## Talks Page
+
+Talks page is a listing page of links(video, ppt, event, ...). UI is similar to the archive page. Follow the below steps to make it.
+
+1. Make a file at root/content/talks/_index.md.
+
+```yaml
+---
+title: "Talks"
+date: 2019-12-30T11:14:14+09:00
+description: Talks Page
+---
+```
+
+2. Next, make some files under the `talks` folder you have created in step 1. If you want to make other links block, then make another file under the `talks` folder.
+
+root/content/talks/myLinks.md
+
+```yaml
+---
+title: "My Awesome links"
+date: 2019-12-31T00:04:50+09:00
+description:
+tags:
+-
+series:
+-
+categories:
+-
+links:
+  - link: "https://google.com"
+    title: "Video Link Title"
+    type: "video"
+  - link: "https://naver.com"
+    title: "PPT Link Title"
+    type: "ppt"
+  - link: "https://yahoo.com"
+    title: "Event Link Title"
+    type: "event"
+---
+
+3. Finally, make a menu at your root/config/_default/menus.en.toml file
+
+```toml
+[[main]]
+  identifier = "talks"
+  name = "talks"
+  url = "talks"
+  weight = 6
+```
+
+And we are good to go.
 
 ## Multi Language
 

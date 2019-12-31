@@ -1,8 +1,6 @@
 .talk {
   &__li {
-    margin-bottom: 0.5rem;
-    margin-left: 4rem;
-    margin-top: 0.5rem;
+    margin: 0.75rem 0 0.75rem 4rem;
     z-index: 0;    
 
     @include transition(margin-left, 0.1s, ease);
@@ -15,41 +13,48 @@
     }
   }
 
-  &__meta {
+  &__date {
     border-radius: 0.25rem;
     min-width: 100px;
     max-width: 100px;
     margin-top: 0.25rem;
+    font-size: 16px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    
+    @include animation('slide-in-left .2s .5s 1 ease both');
+    @include themify($themes) {
+      color: themed('archive-meta-color');
+      background-color: themed('archive-type-background-color');
+    }
+  }
+
+  &__type {
+    border-radius: 0.25rem;
+    min-width: 100px;
+    max-width: 100px;
+    margin-top: 0.25rem;
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
 
     @include flexbox();
     @include align-items(center);
-    @include animation('slide-in-left .2s .5s 1 ease both');
+    @include justify-content(center);
+    @include themify($themes) {
+      color: themed('archive-type-color');
+      background-color: themed('archive-type-background-color');
+    }
   }
 
   &__title {
-    @include truncate($grid-max-width);
-    @include on-event {
-      &::before {
-        content: '';
-        position: absolute;
-        left: 3rem;                
-        width: 0.25rem;
-        height: 20px;
-        line-height: 20px;
-        
-        @include themify($themes) {
-          background-color: themed('archive-hover-line-color');
-        }
-
-        @media only screen and (max-width: 769px) {
-          top: 5px;
-        }
-      }
-    }
+    @include truncate2($grid-max-width);
 
     &--margin {
       margin-right: 0.5rem;  
-      margin-left: 1rem;
+      margin-left: 0.75rem;
     }
   }
 
@@ -58,22 +63,22 @@
     @include flex-direction(column);
 
     li {
-      text-indent: -0.35em;
       padding-left: 0.5em;
-      
-      &::before {
-        padding-right: 0.25rem;
-        margin-left: 2.5rem;
-        font-size: 1rem;
-        display: inline-block;
-        content: "\2022";
-      }
+      margin: 0.25rem 0 0.25rem -3.75rem;
 
-      @include truncate(650px);
+      @include flexbox();
+      @include align-items(center);
+      @include truncate2(650px);
       @media only screen and (max-width: 769px) {
-        margin-left: -5.55rem;
-        @include truncate(350px);
+        margin-left: -6.8rem;
+        @include truncate2(350px);
       }
+    }
+
+    &--item {
+      padding-left: 0.5rem;
+      margin: 0.25rem 0;
+      @include flexbox();
     }
   }
 }
