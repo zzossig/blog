@@ -116,6 +116,7 @@ defaultContentLanguageInSubdir = true # baseURL/en/, baseURL/kr/ ...
 hasCJKLanguage = true # Set `true` for Chinese/Japanese/Korean languages.
 
 summaryLength = 70 # The length of a post description on a list page.
+buildFuture = true # if true, we can use future date for talks page
 
 copyright = "©{year}, All Rights Reserved" # copyright symbol: $copy; current year: {year}
 timeout = 10000
@@ -137,6 +138,10 @@ googleAnalytics = ""
     lineNos = true
     lineNumbersInTable = true
     noClasses = false
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
@@ -514,6 +519,7 @@ root/content/talks/myLinks.md
 ---
 title: "My Awesome links"
 date: 2019-12-31T00:04:50+09:00
+publishDate: 2222-12-31
 description:
 tags:
 -
@@ -545,7 +551,27 @@ root/config/_default/menus.en.toml file
   weight = 6
 ```
 
-And we are good to go.
+4. 추가적으로, date를 미래의 날짜를 쓰고 싶으시면 다음 단계를 따라서 해주세요.
+
+    - 다음 경로의 설정파일(root/config/_default/config.toml)에서 `buildFuture`를 추가해주세요.
+
+    ```toml
+    ...
+    buildFuture = true
+    ...
+    ```
+
+    - talks폴더의 마크다운 파일에 `publishDate`를 추가해주세요. root/content/talks/myLinks.md
+
+    ```yaml
+    ---
+    title:
+    date:
+    publishDate: 2020-02-20
+    ...
+    ---
+    ...
+    ```
 
 ## Multi Language
 

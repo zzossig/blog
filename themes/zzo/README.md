@@ -110,6 +110,7 @@ defaultContentLanguageInSubdir = true # baseURL/en/, baseURL/kr/ ...
 hasCJKLanguage = true # Set `true` for Chinese/Japanese/Korean languages.
 
 summaryLength = 70 # The length of a post description on a list page.
+buildFuture = true # if true, we can use future date for talks page
 
 copyright = "©{year}, All Rights Reserved" # copyright symbol: $copy; current year: {year}
 timeout = 10000
@@ -131,6 +132,10 @@ googleAnalytics = ""
     lineNos = true
     lineNumbersInTable = true
     noClasses = false
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
@@ -508,6 +513,7 @@ root/content/talks/myLinks.md
 ---
 title: "My Awesome links"
 date: 2019-12-31T00:04:50+09:00
+publishDate: 2222-12-31
 description:
 tags:
 -
@@ -526,6 +532,7 @@ links:
     title: "Event Link Title"
     type: "event"
 ---
+```
 
 3. Finally, make a menu at your root/config/_default/menus.en.toml file
 
@@ -538,6 +545,28 @@ links:
 ```
 
 And we are good to go.
+
+4. Additionally, if you want to use a future date for the talks page, you need more things to do.
+
+    - add config variable named `buildFuture` at root/config/_default/config.toml
+
+    ```toml
+    ...
+    buildFuture = true
+    ...
+    ```
+
+    - add publishDate front matter to your md file at root/content/talks/myLinks.md
+
+    ```yaml
+    ---
+    title:
+    date:
+    publishDate: 2020-02-20
+    ...
+    ---
+    ...
+    ```
 
 ## Multi Language
 

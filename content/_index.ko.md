@@ -14,7 +14,7 @@ header:
     spaceBetweenTitleSubtitle: 20
   
   - type: img
-    imageSrc: images/header/zblg.png
+    imageSrc: images/header/background.jpg
     imageSize: initial
     imageRepeat: no-repeat
     imagePosition: center

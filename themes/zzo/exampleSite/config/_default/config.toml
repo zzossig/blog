@@ -7,6 +7,7 @@ defaultContentLanguageInSubdir = true
 hasCJKLanguage = true
 
 summaryLength = 70
+buildFuture = true
 
 copyright = "©{year}, All Rights Reserved"
 timeout = 10000
@@ -28,6 +29,10 @@ googleAnalytics = ""
     lineNos = true
     lineNumbersInTable = true
     noClasses = false
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
