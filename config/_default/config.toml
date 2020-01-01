@@ -6,7 +6,7 @@ defaultContentLanguageInSubdir = false
 hasCJKLanguage = true
 
 summaryLength = 70
-buildFuture = false
+buildFuture = true
 
 copyright = "모든 내용은 {}의 라이센스에 따릅니다."
 timeout = 10000
