@@ -1,4 +1,4 @@
-baseURL = "https://competent-kepler-84ff52.netlify.com/blog"
+baseURL = ""
 theme = "zzo"
 
 defaultContentLanguage = "ko"
@@ -14,12 +14,8 @@ enableEmoji = true
 paginate = 13
 rssLimit = 100
 
-enableGitInfo = true
+enableGitInfo = false
 googleAnalytics = "UA-153642856-1"
-
-RelativeURLs=true
-CanonifyURLs=true
-publishDir="/blog/public"
 
 [markup]
   [markup.goldmark]
