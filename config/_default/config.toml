@@ -17,8 +17,8 @@ rssLimit = 100
 enableGitInfo = true
 googleAnalytics = "UA-153642856-1"
 
-RelativeURLs=false
-CanonifyURLs=false
+RelativeURLs=true
+CanonifyURLs=true
 publishDir="/blog/public"
 
 [markup]
