@@ -14,7 +14,7 @@ header:
     spaceBetweenTitleSubtitle: 20
   
   - type: img
-    imageSrc: images/header/background.png
+    imageSrc: images/header/zzoblog.png
     imageSize: initial
     imageRepeat: no-repeat
     imagePosition: center
