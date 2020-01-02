@@ -17,6 +17,9 @@ rssLimit = 100
 enableGitInfo = true
 googleAnalytics = "UA-153642856-1"
 
+RelativeURLs=true
+CanonifyURLs=true
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
