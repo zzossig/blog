@@ -1,6 +1,4 @@
 [build]
-base = "/blog"
-publish = "/blog/public"
 command = "hugo --gc --minify -b $URL"
 
 [context.production.environment]

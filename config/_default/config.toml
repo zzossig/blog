@@ -19,7 +19,7 @@ googleAnalytics = "UA-153642856-1"
 
 RelativeURLs=false
 CanonifyURLs=false
-publishDir="blog/public"
+publishDir="/blog/public"
 
 [markup]
   [markup.goldmark]
