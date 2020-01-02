@@ -1,12 +1,12 @@
 [build]
-publish = "blog/public"
+base = "/blog"
+publish = "/blog/public"
 command = "hugo --gc --minify -b $URL"
 
 [context.production.environment]
 HUGO_VERSION = "0.62.1"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
-HUGO_BASEURL = "https://competent-kepler-84ff52.netlify.com/"
 
 [context.deploy-preview]
 command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
