@@ -8,6 +8,7 @@ series:
 -
 categories:
 -
+enableToc: false
 featured_image: feature2/number.png
 ---
 

@@ -1,6 +1,9 @@
 logoText = "Zzo blog"
 description = "쪼식이 블로그"
 
+themeOptions = ["dark", "light", "hacker", "solarized", "custom"]
+notAllowedTypesInHome = ["contact", "talks", "about"]
+
 # header
 homeHeaderType = "text" # text, img, slide
 
@@ -44,7 +47,6 @@ showFeedLinks = true
 showSocialLinks = true
 enableLangChange = true
 enableThemeChange = true
-themeOptions = ["dark", "light", "hacker", "solarized", "custom"]
 
 # service
 baiduAnalytics = ""

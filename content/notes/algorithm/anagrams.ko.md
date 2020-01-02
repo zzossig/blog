@@ -8,6 +8,7 @@ series:
 -
 categories:
 -
+enableToc: false
 featured_image: feature3/flow-chart.png
 ---
 
@@ -27,4 +28,3 @@ example:
 ```
 
 {{< /box >}}
-
