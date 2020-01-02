@@ -1,4 +1,4 @@
-baseURL = "https://competent-kepler-84ff52.netlify.com/blog"
+baseURL = "blog"
 theme = "zzo"
 
 defaultContentLanguage = "ko"
