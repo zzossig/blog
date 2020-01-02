@@ -1,4 +1,4 @@
-baseURL = "https://competent-kepler-84ff52.netlify.com"
+baseURL = "https://competent-kepler-84ff52.netlify.com/"
 theme = "zzo"
 
 defaultContentLanguage = "ko"
@@ -17,8 +17,8 @@ rssLimit = 100
 enableGitInfo = true
 googleAnalytics = "UA-153642856-1"
 
-RelativeURLs=true
-CanonifyURLs=true
+RelativeURLs=false
+CanonifyURLs=false
 
 [markup]
   [markup.goldmark]
