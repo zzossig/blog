@@ -14,7 +14,7 @@ enableEmoji = true
 paginate = 13
 rssLimit = 100
 
-enableGitInfo = false
+enableGitInfo = true
 googleAnalytics = "UA-153642856-1"
 
 [markup]
