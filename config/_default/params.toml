@@ -5,7 +5,7 @@ themeOptions = ["dark", "light", "hacker", "solarized", "custom"]
 notAllowedTypesInHome = ["contact", "talks", "about"]
 
 # header
-homeHeaderType = "text" # text, img, slide
+homeHeaderType = "img" # text, img, slide
 
 # body
 enableBreadcrumb = true

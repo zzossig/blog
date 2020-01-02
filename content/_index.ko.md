@@ -25,7 +25,7 @@ header:
     title:
       - 
     subtitle:
-      -
+      - 
     titleFontSize: 44
     subtitleFontSize: 16
     spaceBetweenTitleSubtitle: 20
