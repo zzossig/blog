@@ -17,18 +17,9 @@
   // theme change
   var  themeChange = function() {
     var localTheme = localStorage.getItem('theme');
-    document.querySelector('.select-theme').childNodes.forEach(function (node) {
-      if (node.classList) {
-        if (node.text && node.text.trim() === localTheme) {
-          node.classList.add('is-active');
-        } else {
-          node.classList.remove('is-active');
-        }
-      }
-    });
-
     if (localTheme) {
       document.querySelectorAll('.select-theme__item').forEach(function(v, i) {
+        v.classList.remove('is-active');
         v.addEventListener('click', function(e) {
           var selectedThemeVariant = e.target.text.trim();
           localStorage.setItem('theme', selectedThemeVariant);
@@ -71,6 +62,16 @@
             }, 'https://utteranc.es');
           }
         });
+      });
+
+      document.querySelector('.select-theme').childNodes.forEach(function (node) {
+        if (node.classList) {
+          if (node.text && node.text.trim() === localTheme) {
+            node.classList.add('is-active');
+          } else {
+            node.classList.remove('is-active');
+          }
+        }
       });
     }
   }
