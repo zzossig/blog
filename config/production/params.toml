@@ -1,4 +1,4 @@
-logoText = "Zzo blog"
+logoText = "Zzo"
 description = "쪼식이 블로그"
 custom_css = []
 custom_js = []
@@ -7,7 +7,7 @@ themeOptions = ["dark", "light", "hacker", "solarized", "custom"]
 notAllowedTypesInHome = ["contact", "talks", "about"]
 
 # header
-homeHeaderType = "text" # text, img, slide
+homeHeaderType = "img" # text, img, slide
 
 # body
 enableBreadcrumb = true
