@@ -19,8 +19,6 @@
 {{ if $.Param "enablePhotoSwipe" }}
   {{ $swipe := resources.Get "js/swipe.min.js" | resources.Fingerprint }}
   <script defer src="{{ $swipe.RelPermalink }}"></script>
-  {{ $modal := resources.Get "js/micromodal.min.js" | resources.Fingerprint }}
-  <script defer src="{{ $modal.RelPermalink }}"></script>
 {{ end }}
 
 {{ if in .Params.Libraries "mermaid" }}
@@ -104,6 +102,24 @@
     var singleContentsElem = document.querySelector('.single__contents');
     var swipeWrapElem = document.querySelector('.swipe-wrap');
 
+    var modal = document.querySelector(".modal");
+    var closeButton = document.querySelector(".close-button");
+
+    function toggleModal() {
+      modal.classList.toggle("show-modal");
+    }
+
+    function windowOnClick(event) {
+      if (event.target === modal) {
+        toggleModal();
+      }
+    }
+
+    closeButton.addEventListener("click", toggleModal);
+    window.addEventListener("click", windowOnClick);
+    
+
+
     var mySwipe = new Swipe(document.getElementById('mySwipe'), {
       startSlide: 0,
       draggable: true,
@@ -114,32 +130,19 @@
       callback: function(index, element) {},
       transitionEnd: function(index, element) {}
     });
-    console.log(mySwipe);
+    
     singleContentsElem.querySelectorAll('img').forEach(function(elem, idx) {
       elem.style.cursor = 'pointer';
 
-      var clonedElem = elem.cloneNode(true);
-      clonedElem.style.width = '200px';
-      clonedElem.style.height = '200px';
+      /*var clonedElem = elem.cloneNode(true);
       clonedElem.setAttribute('title', elem.getAttribute('alt'));
 
       var wrapper = document.createElement('div');
-      wrapper.style.width = '100%';
-      wrapper.style.height = '100%';
-
       wrapper.append(clonedElem);
-      swipeWrapElem.append(wrapper);
+      swipeWrapElem.append(wrapper);*/
 
       elem.addEventListener('click', function(e) {
-        MicroModal.show('modal', {
-          disableScroll: false,
-          disableFocus: true,
-          awaitOpenAnimation: false,
-          awaitCloseAnimation: false,
-          debugMode: false,
-        });
-        //mySwipe.setup();
-        //mySwipe.restart();
+        toggleModal();
       });
     });
     // =================================================================
