@@ -36,8 +36,8 @@ Thank you for click me!. Zzo theme is a blog theme powered by Hugo with free(alw
 * Multilingual (i18n)
 * Responsive design
 * RSS and JSON feeds with full content
-* Search with Fuse
-* Gallery with Masonry, Photoswipe
+* Search
+* Gallery
 * Fast code highlighting
 * Talks page for external links
 

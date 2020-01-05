@@ -17,14 +17,10 @@
 <script defer src="{{ $prop.RelPermalink }}"></script>
 
 {{ if $.Param "enablePhotoSwipe" }}
-  {{ $photoSwipe := resources.Get "lib/photoswipe/photoswipe.min.js" | resources.Fingerprint }}
-  <script defer src="{{ $photoSwipe.RelPermalink }}"></script>
-  {{ $photoSwipeUi := resources.Get "lib/photoswipe/photoswipe-ui-default.min.js" | resources.Fingerprint }}
-  <script defer src="{{ $photoSwipeUi.RelPermalink }}"></script>
-  {{ $photoSwipeStyle := resources.Get "lib/photoswipe/photoswipe.css" | resources.Minify }}
-  <link rel="stylesheet" href="{{ $photoSwipeStyle.RelPermalink }}">
-  {{ $photoSwipeSkin := resources.Get "lib/photoswipe/custom-skin.css" | resources.Minify }}
-  <link rel="stylesheet" href="{{ $photoSwipeSkin.RelPermalink }}">
+  {{ $swipe := resources.Get "js/swipe.min.js" | resources.Fingerprint }}
+  <script defer src="{{ $swipe.RelPermalink }}"></script>
+  {{ $modal := resources.Get "js/micromodal.min.js" | resources.Fingerprint }}
+  <script defer src="{{ $modal.RelPermalink }}"></script>
 {{ end }}
 
 {{ if in .Params.Libraries "mermaid" }}
@@ -101,6 +97,51 @@
       newElem.setAttribute('title', 'Copy to clipboard');
       elem.append(newElem);
     }) : null;
+    // =================================================================
+
+
+    // ============================ gallery ============================
+    var singleContentsElem = document.querySelector('.single__contents');
+    var swipeWrapElem = document.querySelector('.swipe-wrap');
+
+    var mySwipe = new Swipe(document.getElementById('mySwipe'), {
+      startSlide: 0,
+      draggable: true,
+      autoRestart: false,
+      continuous: true,
+      disableScroll: false,
+      stopPropagation: true,
+      callback: function(index, element) {},
+      transitionEnd: function(index, element) {}
+    });
+    console.log(mySwipe);
+    singleContentsElem.querySelectorAll('img').forEach(function(elem, idx) {
+      elem.style.cursor = 'pointer';
+
+      var clonedElem = elem.cloneNode(true);
+      clonedElem.style.width = '200px';
+      clonedElem.style.height = '200px';
+      clonedElem.setAttribute('title', elem.getAttribute('alt'));
+
+      var wrapper = document.createElement('div');
+      wrapper.style.width = '100%';
+      wrapper.style.height = '100%';
+
+      wrapper.append(clonedElem);
+      swipeWrapElem.append(wrapper);
+
+      elem.addEventListener('click', function(e) {
+        MicroModal.show('modal', {
+          disableScroll: false,
+          disableFocus: true,
+          awaitOpenAnimation: false,
+          awaitCloseAnimation: false,
+          debugMode: false,
+        });
+        //mySwipe.setup();
+        //mySwipe.restart();
+      });
+    });
     // =================================================================
 
 

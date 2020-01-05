@@ -11,6 +11,9 @@ categories:
 featured_image: feature3/align-text-top.png
 ---
 
+{{< img src="/images/feature1/flow.png" title="Image4" caption="Image description" alt="image alt" >}}
+{{< img src="/images/feature1/web.png" title="Image4" caption="Image description" alt="image alt" >}}
+
 ## . 와일드카드
 
 `.`은 정규식에서 와일드카드라고 부른다. `.`을 쓴 부분에서는 어느 문자가 오든 매칭되는 값이라고 본다.
