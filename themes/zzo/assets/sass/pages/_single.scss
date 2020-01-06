@@ -466,7 +466,7 @@ pre:not(.chroma) {
 
     &:first-child {
       width: 10px;
-      user-select: none;
+      @include no-select;
 
       pre {
         margin: 0;

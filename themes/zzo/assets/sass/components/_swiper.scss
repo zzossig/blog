@@ -23,7 +23,7 @@
 .swipe {
   overflow: hidden;
   visibility: hidden;
-  position: relative;
+  position: relative;  
 }
 .swipe-wrap {
   overflow: hidden;
@@ -31,6 +31,11 @@
 }
 .swipe-wrap > div {
   float: left;
-  width: 100%;
   position: relative;
+  overflow: hidden;
+  object-fit: contain;
+
+  @include flexbox();
+  @include justify-content(center);
+  @include align-items(center);
 }
