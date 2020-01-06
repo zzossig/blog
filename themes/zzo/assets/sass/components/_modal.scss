@@ -6,7 +6,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.85);
+    background: rgba(0,0,0,0.7);
     @include flexbox();
     @include justify-content(center);
     @include align-items(center);
@@ -22,24 +22,36 @@
 
   &__content {
     margin: auto;
-    color: rgba(0,0,0,.8);
     position: relative;
+  }
+
+  &__header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background: rgba(0,0,0,0.45);
   }
 
   &__caption {
     position: absolute;
     bottom: 0;
     left: 50%;
-    width: 40%;
-    padding: 0.5rem;
-    height: auto;
-    text-align: center;
-    font-family: $title-font;
-    font-size: 14px;
-    background: transparent;
+    width: 100%;
+    background: rgba(0,0,0,0.45);
 
     @include no-select;
     @include translateX(-50%);
+
+    &--text {
+      text-align: center;
+      font-family: $title-font;
+      font-size: 14px;
+      padding: 0.5rem;
+      width: 40%;
+      height: auto;
+      margin: 0 auto;
+    }
   }
 
   &__paging {
@@ -47,7 +59,7 @@
     top: 0;
     left: 0;
     width: 100px;
-    padding: 1rem;
+    padding: 0.8rem;
     height: auto;
     font-family: $title-font;
     font-size: 16px;
@@ -58,45 +70,62 @@
 
   &__icon {
     margin: 0;
+    padding: 0.4rem;
     position: absolute;
     overflow: hidden;
     cursor: pointer;
+    border-radius: 0.25rem;
 
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+  }
+
+  &__toolbar {
     @include themify($themes) {
       color: themed('gtt-color');
 
       @include on-event {
         color: themed('gtt-hover-color');
+        background: rgba(0,0,0,0.4);
       }
     }
-  }
-
-  &__toolbar {
+    
     &--close {
-      top: 0.5rem;
-      right: 0.5rem;
+      top: 0.4rem;
+      right: 0.25rem;
     }
 
     &--full {
-      top: 0.5rem;
-      right: 3.5rem;
+      top: 0.4rem;
+      right: 2.8rem;
     }
 
     &--normal {
-      top: 0.5rem;
-      right: 3.5rem;
+      top: 0.4rem;
+      right: 2.8rem;
     }
   }
 
   &__arrow {
+    @include themify($themes) {
+      color: themed('gtt-color');
+      background: rgba(0,0,0,0.45);
+
+      @include on-event {
+        color: themed('gtt-hover-color');
+        background: rgba(0,0,0,0.5);
+      }
+    }
+
     &--left {
-      left: 1rem;
+      left: 0.5rem;
       top: 50%;
       @include translateY(-50%);
     }
 
     &--right {
-      right: 1rem;
+      right: 0.5rem;
       top: 50%;
       @include translateY(-50%);
     }

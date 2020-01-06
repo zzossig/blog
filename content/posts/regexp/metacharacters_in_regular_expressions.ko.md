@@ -2,7 +2,6 @@
 title: "정규식에서 쓰이는 메타 문자"
 date: 2019-12-31T18:49:24+09:00
 description: 정규식의 특수 문자 살펴보기(^$.*+?=!:|\/()[]{})
-draft: true
 tags:
 - regexp
 series:
@@ -11,13 +10,6 @@ categories:
 -
 featured_image: feature3/align-text-top.png
 ---
-
-{{< img src="/test/1.jpg" title="Image4" caption="00Image description" alt="image alt" >}}
-{{< img src="/test/2.gif" title="Image4" caption="11Image description" alt="image alt" >}}
-{{< img src="/test/3.png" title="Image4" caption="22Image description" alt="image alt" >}}
-{{< img src="/test/4.jpg" title="Image4" caption="33Image description" alt="image alt" >}}
-{{< img src="/test/5.jpg" title="Image4" caption="44Image description" alt="image alt" >}}
-{{< img src="/test/6.jpg" title="Image4" caption="55Image description" alt="image alt" >}}
 
 ## . 와일드카드
 

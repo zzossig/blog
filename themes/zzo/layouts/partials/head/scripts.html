@@ -12,6 +12,8 @@
 <script defer src="{{ $fuse.RelPermalink }}"></script>
 {{ $getParents := resources.Get "js/helper/getParents.js" | resources.Minify | resources.Fingerprint }}
 <script defer src="{{ $getParents.RelPermalink }}"></script>
+{{ $fadeinout := resources.Get "js/helper/fadeinout.js" | resources.Minify | resources.Fingerprint }}
+<script defer src="{{ $fadeinout.RelPermalink }}"></script>
 
 <script>
   "use strict";
