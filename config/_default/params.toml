@@ -1,7 +1,7 @@
 logoText = "Zzo"
 description = "쪼식이 블로그"
 
-themeOptions = ["dark", "light", "hacker", "solarized", "custom"]
+themeOptions = ["dark", "light", "hacker", "solarized", "kimbie"]
 notAllowedTypesInHome = ["contact", "talks", "about"]
 
 # header

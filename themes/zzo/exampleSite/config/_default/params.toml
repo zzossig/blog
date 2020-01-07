@@ -3,7 +3,7 @@ description = "The Zzo theme for Hugo example site."
 custom_css = []
 custom_js = []
 
-themeOptions = ["dark", "light", "hacker", "solarized", "custom"]
+themeOptions = ["dark", "light", "hacker", "solarized"]
 notAllowedTypesInHome = ["contact", "talks", "about"]
 
 # header
@@ -11,6 +11,7 @@ homeHeaderType = "text" # text, img, slide
 
 # body
 enableBreadcrumb = true
+enablePhotoSwipe = true
 enableSearch = true
 enableSearchHighlight = true
 enableGoToTop = true
@@ -19,7 +20,7 @@ summaryShape = "classic" # card, classic, compact
 archiveGroupByDate = "2006" # "2006-01": group by month, "2006": group by year
 archivePaginate = 13
 paginateWindow = 1
-talksPaginate = 8
+talksPaginate = 5
 talksGroupByDate = "2006"
 
 # whoami
@@ -29,7 +30,7 @@ whoami = "Web Developer"
 useGravatar = false
 location = "Seoul, Korea"
 organization = "Hugo"
-link = "https://zzossig.io"
+link = "https://zzossig.io/ko"
 
 # sidebar
 enableBio = true
@@ -125,7 +126,6 @@ commento = false
   zhihu = ""
   gitlab = ""
   mastodon = ""
-  jianshu = ""
 
 [donationOptions]
   enable = false
@@ -133,9 +133,3 @@ commento = false
   wechat = ""
   paypal = ""
   patreon = ""
-
-[copyrightOptions]
-  enableCopyrightLink = false
-  copyrightLink = ""
-  copyrightLinkImage = ""
-  copyrightLinkText = ""

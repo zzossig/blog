@@ -216,7 +216,7 @@ description = "The Zzo theme for Hugo example site." # for SEO
 custom_css = [] # custom_css = ["scss/custom.scss"] and then make file at root/assets/scss/custom.scss
 custom_js = [] # custom_js = ["js/custom.js"] and then make file at root/assets/js/custom.js
 
-themeOptions = ["dark", "light", "hacker", "solarized", "custom"] # select options for site color theme
+themeOptions = ["dark", "light", "hacker", "solarized"] # select options for site color theme
 notAllowedTypesInHome = ["contact", "talks", "about"] # not allowed page types in home page. type can be set in front matter or default to folder name.
 
 # header
@@ -687,16 +687,6 @@ custom_js = ["js/custom.js", ...]
 ```bash
 assets/js/custom.js
 ```
-
-### custom skin(sub theme)
-
-1. Make a skin.toml file in data folder. (data/skin.toml)
-
-2. Set custom_theme_primary_color variable. The range of value that can be set is from "0" to "359".
-
-3. Restart hugo.
-
-5. Once you change the skin.toml file, restart hugo.
 
 ### custom syntax highlighting
 

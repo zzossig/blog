@@ -222,7 +222,7 @@ description = "The Zzo theme for Hugo example site." # for SEO
 custom_css = [] # custom_css = ["scss/custom.scss"] and then make file at root/assets/scss/custom.scss
 custom_js = [] # custom_js = ["js/custom.js"] and then make file at root/assets/js/custom.js
 
-themeOptions = ["dark", "light", "hacker", "solarized", "custom"] # select options for site color theme
+themeOptions = ["dark", "light", "hacker", "solarized"] # select options for site color theme
 notAllowedTypesInHome = ["contact", "talks", "about"] # not allowed page types in home page. type can be set in front matter or default to folder name.
 
 # header
@@ -695,14 +695,6 @@ custom_js = ["js/custom.js", ...]
 ```bash
 assets/js/custom.js
 ```
-
-### custom skin(sub theme)
-
-1. data폴더에 skin.toml 파일을 만들어주세요. (data/skin.toml)
-
-2. custom_theme_primary_color항목의 값을 변경해주세요. 값의 범위는 "0" 부터 "359" 까지 입니다.
-
-3. 변경 후, 휴고를 다시 시작해주세요. 안그러면 변경사항이 적용 안될 수도 있습니다.
 
 ### custom syntax highlighting
 

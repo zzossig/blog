@@ -44,16 +44,16 @@ $solarizedcode: '';
     content-pre-header-background-color: darken(#FBF1D1, 6%),
     content-pre-header-color: #344952,
   );
-} @else if $theme_solarized_chroma_background == custom {
+} @else if $theme_solarized_chroma_background == kimbie {
   $solarizedcode: (
     content-code-color: #002633,
-    content-pre-main-color: hsl($custom_theme_primary_color, 65%, 32%),
-    content-pre-color: hsl($custom_theme_primary_color, 100%, 10%),
-    content-pre-number-color: hsl($custom_theme_primary_color, 0%, 67%),
-    content-pre-background-color: hsl($custom_theme_primary_color, 100%, 97%),
-    content-pre-header-color: hsl($custom_theme_primary_color, 100%, 10%),
-    content-pre-header-background-color: hsl($custom_theme_primary_color, 100%, 92%),
-    content-pre-border-background-color: hsl($custom_theme_primary_color, 100%, 86%),
+    content-pre-main-color: #fff,
+    content-pre-color: #fff,
+    content-pre-number-color: #fff,
+    content-pre-background-color: #fff,
+    content-pre-header-color: #fff,
+    content-pre-header-background-color: #fff,
+    content-pre-border-background-color: #fff,
   );
 } @else {
   $solarizedcode: (

@@ -12,6 +12,8 @@
 <script defer src="{{ $fuse.RelPermalink }}"></script>
 {{ $getParents := resources.Get "js/helper/getParents.js" | resources.Minify | resources.Fingerprint }}
 <script defer src="{{ $getParents.RelPermalink }}"></script>
+{{ $fadeinout := resources.Get "js/helper/fadeinout.js" | resources.Minify | resources.Fingerprint }}
+<script defer src="{{ $fadeinout.RelPermalink }}"></script>
 
 <script>
   "use strict";
@@ -46,8 +48,8 @@
 
     // ========================== scroll ==========================
     var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    var tableOfContentsElem = document.getElementById('TableOfContents');
     var tocElem = document.querySelector('.toc');
+    var tableOfContentsElem = tocElem ? tocElem.querySelector('#TableOfContents') : null;
     var toggleTocElem = document.getElementById('toggle-toc');
     var singleContentsElem = document.querySelector('.single__contents');
     var navbar = document.querySelector('.navbar');
@@ -80,25 +82,27 @@
           }
           
           if (document.documentElement.scrollTop >= elem.offsetTop) {
-            var id = elem.getAttribute('id');
-            tocElem.querySelectorAll('a').forEach(function (elem) {
-              elem.classList.remove('active');
-            });
-            tocElem.querySelector('a[href="#' + id + '"]').classList.add('active');
-
-            document.querySelectorAll('#TableOfContents > ul > li').forEach(function(liElem) {
-              liElem.querySelectorAll('ul').forEach(function(ulElem) {
-                ulElem.style.display = 'none';
+            if (tableOfContentsElem) {
+              var id = elem.getAttribute('id');
+              tocElem.querySelectorAll('a').forEach(function (elem) {
+                elem.classList.remove('active');
               });
-            });
+              tocElem.querySelector('a[href="#' + id + '"]').classList.add('active');
 
-            var curElem = tableOfContentsElem.querySelector(`[href="#${id}"]`);
-            if (curElem.nextElementSibling) {
-              curElem.nextElementSibling.style.display = 'block';
+              tableOfContentsElem.querySelectorAll('ul > li').forEach(function (liElem) {
+                liElem.querySelectorAll('ul').forEach(function (ulElem) {
+                  ulElem.style.display = 'none';
+                });
+              });
+
+              var curElem = tableOfContentsElem.querySelector(`[href="#${id}"]`);
+              if (curElem.nextElementSibling) {
+                curElem.nextElementSibling.style.display = 'block';
+              }
+              getParents(curElem, 'ul').forEach(function (elem) {
+                elem.style.display = 'block';
+              });
             }
-            getParents(curElem, 'ul').forEach(function(elem) {
-              elem.style.display = 'block';
-            });
           }
         }) : null;
       } else { // scroll up
@@ -119,25 +123,27 @@
           }
 
           if (document.documentElement.scrollTop >= elem.offsetTop) {
-            var id = elem.getAttribute('id');
-            tocElem.querySelectorAll('a').forEach(function (elem) {
-              elem.classList.remove('active');
-            });
-            tocElem.querySelector('a[href="#' + id + '"]').classList.add('active');
-
-            document.querySelectorAll('#TableOfContents > ul > li').forEach(function (liElem) {
-              liElem.querySelectorAll('ul').forEach(function (ulElem) {
-                ulElem.style.display = 'none';
+            if (tableOfContentsElem) {
+              var id = elem.getAttribute('id');
+              tocElem.querySelectorAll('a').forEach(function (elem) {
+                elem.classList.remove('active');
               });
-            });
+              tocElem.querySelector('a[href="#' + id + '"]').classList.add('active');
 
-            var curElem = tableOfContentsElem.querySelector(`[href="#${id}"]`);
-            if (curElem.nextElementSibling) {
-              curElem.nextElementSibling.style.display = 'block';
+              tableOfContentsElem.querySelectorAll('ul > li').forEach(function (liElem) {
+                liElem.querySelectorAll('ul').forEach(function (ulElem) {
+                  ulElem.style.display = 'none';
+                });
+              });
+
+              var curElem = tableOfContentsElem.querySelector(`[href="#${id}"]`);
+              if (curElem.nextElementSibling) {
+                curElem.nextElementSibling.style.display = 'block';
+              }
+              getParents(curElem, 'ul').forEach(function (elem) {
+                elem.style.display = 'block';
+              }); 
             }
-            getParents(curElem, 'ul').forEach(function (elem) {
-              elem.style.display = 'block';
-            });
           }
         }) : null;
 
