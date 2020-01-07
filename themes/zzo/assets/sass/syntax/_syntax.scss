@@ -368,7 +368,7 @@
 
 .theme__kimbie {
   @if $theme_kimbie_chroma == default {
-    @include chroma-autumn;
+    @include chroma-monokailight;
   } @else if $theme_kimbie_chroma == abap {
     @include chroma-abap;
   } @else if $theme_kimbie_chroma == algol {
@@ -444,6 +444,6 @@
   } @else if $theme_kimbie_chroma == xcode {
     @include chroma-xcode;
   } @else {
-    @include chroma-autumn;
+    @include chroma-monokailight;
   }
 }

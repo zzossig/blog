@@ -988,3 +988,11 @@ A notice disclaimer
 ```bash
 {{< color "#0000ff" >}}*text*{{< /color >}}
 ```
+
+### box
+
+```bash
+{{< box >}}
+Some markdown contents
+{{< /box >}}
+```
