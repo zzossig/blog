@@ -5,9 +5,9 @@ description: Grouping을 사용하여 정규식을 정교하게 사용해보자
 draft: false
 enableTocContent: false
 tags:
--
+- regexp
 series:
--
+- 정규식
 categories:
 -
 featured_image: feature4/group.png
