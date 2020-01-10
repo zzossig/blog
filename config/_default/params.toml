@@ -1,11 +1,12 @@
 logoText = "Zzo"
+logoType = "short" # long, short
 description = "쪼식이 블로그"
 
 themeOptions = ["dark", "light", "hacker", "solarized", "kimbie"]
 notAllowedTypesInHome = ["contact", "talks", "about"]
 
 # header
-homeHeaderType = "img" # text, img, slide
+homeHeaderType = "text" # text, img, slide
 
 # body
 enableBreadcrumb = true

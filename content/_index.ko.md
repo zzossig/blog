@@ -6,9 +6,11 @@ header:
     paddingY: 0
     align: center
     title:
-      - 쪼식이 블로그
+      - Zzo blog
     subtitle:
       - 
+    titleColor: 
+    titleShadow: true
     titleFontSize: 44
     subtitleFontSize: 16
     spaceBetweenTitleSubtitle: 20

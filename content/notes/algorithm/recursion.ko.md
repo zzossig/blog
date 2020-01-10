@@ -41,7 +41,7 @@ function collectOddValues(arr) {
 }
 ```
 
-## Solutions -Pure Recursion
+## Solutions - Pure Recursion
 
 ```javascript
 function collectOddValues(arr) {

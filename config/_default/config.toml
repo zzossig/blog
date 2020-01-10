@@ -29,7 +29,7 @@ googleAnalytics = "UA-153642856-1"
     lineNumbersInTable = true
     noClasses = false
   [markup.tableOfContents]
-    endLevel = 3
+    endLevel = 4
     ordered = false
     startLevel = 2
 

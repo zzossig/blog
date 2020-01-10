@@ -218,6 +218,7 @@ You shoud make your own menu.
 
 ```bash
 logoText = "Zzo" # Logo text that appears in the site navigation bar.
+logoType = "short" # long, short -> short: squre shape includes logo text, long: rectangle shape not includes logo text
 description = "The Zzo theme for Hugo example site." # for SEO
 custom_css = [] # custom_css = ["scss/custom.scss"] and then make file at root/assets/scss/custom.scss
 custom_js = [] # custom_js = ["js/custom.js"] and then make file at root/assets/js/custom.js
@@ -347,7 +348,6 @@ commento = false
   gitlab = ""
   mastodon = ""
   jianshu = ""
-  zhihu = ""
 
 [donationOptions] 
   enable = false # if set, the donation button will show up on the single page.
@@ -514,7 +514,7 @@ description: Talks Page
 ---
 ```
 
-2. 또 다른 파일을 만들어 줍니다. 이곳에 링크 값을 넣을 겁니다. 
+2. 또 다른 파일을 만들어 줍니다. 이곳에 내용을 넣어주세요. 
 
 root/content/talks/myLinks.md
 
@@ -530,17 +530,8 @@ series:
 -
 categories:
 -
-links:
-  - link: "https://google.com"
-    title: "Video Link Title"
-    type: "video"
-  - link: "https://naver.com"
-    title: "PPT Link Title"
-    type: "ppt"
-  - link: "https://yahoo.com"
-    title: "Event Link Title"
-    type: "event"
 ---
+```
 
 3. 마지막으로 메뉴만 다음 과 같이 만들어 주면 됩니다. 
 
@@ -739,6 +730,8 @@ header:
       - HUGO
     subtitle:
       - The world’s fastest framework for building websites
+    titleColor:
+    titleShadow: false
     titleFontSize: 44
     subtitleFontSize: 16
     spaceBetweenTitleSubtitle: 20

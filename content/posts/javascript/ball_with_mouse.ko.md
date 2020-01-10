@@ -29,8 +29,8 @@ canvas는 그 이름에서 암시하듯, 브라우저 화면에 canvas가 차지
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-	<meta content="utf-8" http-equiv="encoding">
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
 </head>
 
 <body>
@@ -40,8 +40,8 @@ canvas는 그 이름에서 암시하듯, 브라우저 화면에 canvas가 차지
 var canvas, canvasContext;
 
 window.onload = function() {
-	canvas = document.getElementById('gameCanvas');
-	canvasContext = canvas.getContext('2d');
+  canvas = document.getElementById('gameCanvas');
+  canvasContext = canvas.getContext('2d');
 }
 
 </script>
@@ -83,23 +83,23 @@ var ballX = 75;
 var canvas, canvasContext;
 
 window.onload = function() {
-	canvas = document.getElementById('gameCanvas');
-	canvasContext = canvas.getContext('2d');
+  canvas = document.getElementById('gameCanvas');
+  canvasContext = canvas.getContext('2d');
 
-	var framesPerSecond = 30;
-	setInterval(updateAll, 1000/framesPerSecond);
+  var framesPerSecond = 30;
+  setInterval(updateAll, 1000/framesPerSecond);
 }
 
 function updateAll() {
-	ballX += 5;
+  ballX += 5;
 
-	canvasContext.fillStyle = '#123456';
-	canvasContext.fillRect(0,0, canvas.width, canvas.height);
+  canvasContext.fillStyle = '#123456';
+  canvasContext.fillRect(0,0, canvas.width, canvas.height);
 
-	canvasContext.fillStyle = 'white';
-	canvasContext.beginPath();
-	canvasContext.arc(ballX,100, 10, 0,Math.PI*2, true);
-	canvasContext.fill();
+  canvasContext.fillStyle = 'white';
+  canvasContext.beginPath();
+  canvasContext.arc(ballX,100, 10, 0,Math.PI*2, true);
+  canvasContext.fill();
 }
 ```
 
@@ -118,37 +118,37 @@ var ballSpeedY = 7;
 var canvas, canvasContext;
 
 window.onload = function() {
-	canvas = document.getElementById('gameCanvas');
-	canvasContext = canvas.getContext('2d');
+  canvas = document.getElementById('gameCanvas');
+  canvasContext = canvas.getContext('2d');
 
-	var framesPerSecond = 30;
-	setInterval(updateAll, 1000/framesPerSecond);
+  var framesPerSecond = 30;
+  setInterval(updateAll, 1000/framesPerSecond);
 }
 
 function updateAll() {
-	ballX += ballSpeedX;
-	ballY += ballSpeedY;
+  ballX += ballSpeedX;
+  ballY += ballSpeedY;
 
-	if(ballX < 0) {
-		ballSpeedX *= -1;
-	}
-	if(ballX > canvas.width) {
-		ballSpeedX *= -1;
-	}
-	if(ballY < 0) {
-		ballSpeedY *= -1;
-	}
-	if(ballY > canvas.height) {
-		ballSpeedY *= -1;
-	}
+  if(ballX < 0) {
+    ballSpeedX *= -1;
+  }
+  if(ballX > canvas.width) {
+    ballSpeedX *= -1;
+  }
+  if(ballY < 0) {
+    ballSpeedY *= -1;
+  }
+  if(ballY > canvas.height) {
+    ballSpeedY *= -1;
+  }
 
-	canvasContext.fillStyle = '#123456';
-	canvasContext.fillRect(0,0, canvas.width, canvas.height);
+  canvasContext.fillStyle = '#123456';
+  canvasContext.fillRect(0,0, canvas.width, canvas.height);
 
-	canvasContext.fillStyle = 'white';
-	canvasContext.beginPath();
-	canvasContext.arc(ballX,ballY, 10, 0,Math.PI*2, true);
-	canvasContext.fill();
+  canvasContext.fillStyle = 'white';
+  canvasContext.beginPath();
+  canvasContext.arc(ballX,ballY, 10, 0,Math.PI*2, true);
+  canvasContext.fill();
 }
 
 ```
@@ -166,51 +166,51 @@ var ballSpeedY = 7;
 var canvas, canvasContext;
 
 window.onload = function() {
-	canvas = document.getElementById('gameCanvas');
-	canvasContext = canvas.getContext('2d');
+  canvas = document.getElementById('gameCanvas');
+  canvasContext = canvas.getContext('2d');
 
-	var framesPerSecond = 30;
-	setInterval(updateAll, 1000/framesPerSecond);
+  var framesPerSecond = 30;
+  setInterval(updateAll, 1000/framesPerSecond);
 }
 
 function updateAll() {
-	moveAll();
-	drawAll();
+  moveAll();
+  drawAll();
 }
 
 function moveAll() {
-	ballX += ballSpeedX;
-	ballY += ballSpeedY;
+  ballX += ballSpeedX;
+  ballY += ballSpeedY;
 
-	if(ballX < 0) {
-		ballSpeedX *= -1;
-	}
-	if(ballX > canvas.width) {
-		ballSpeedX *= -1;
-	}
-	if(ballY < 0) {
-		ballSpeedY *= -1;
-	}
-	if(ballY > canvas.height) {
-		ballSpeedY *= -1;
-	}
+  if(ballX < 0) {
+    ballSpeedX *= -1;
+  }
+  if(ballX > canvas.width) {
+    ballSpeedX *= -1;
+  }
+  if(ballY < 0) {
+    ballSpeedY *= -1;
+  }
+  if(ballY > canvas.height) {
+    ballSpeedY *= -1;
+  }
 }
 
 function drawAll() {
-	colorRect(0,0, canvas.width,canvas.height, 'black'); // clear screen
+  colorRect(0,0, canvas.width,canvas.height, 'black'); // clear screen
 
-	colorCircle(ballX,ballY, 10, 'white'); // draw ball
+  colorCircle(ballX,ballY, 10, 'white'); // draw ball
 }
 
 function colorRect(topLeftX,topLeftY, boxWidth,boxHeight, fillColor) {
-	canvasContext.fillStyle = fillColor;
-	canvasContext.fillRect(topLeftX,topLeftY, boxWidth,boxHeight);
+  canvasContext.fillStyle = fillColor;
+  canvasContext.fillRect(topLeftX,topLeftY, boxWidth,boxHeight);
 }
 
 function colorCircle(centerX,centerY, radius, fillColor) {
-	canvasContext.fillStyle = fillColor;
-	canvasContext.beginPath();
-	canvasContext.arc(centerX,centerY, 10, 0,Math.PI*2, true);
-	canvasContext.fill();
+  canvasContext.fillStyle = fillColor;
+  canvasContext.beginPath();
+  canvasContext.arc(centerX,centerY, 10, 0,Math.PI*2, true);
+  canvasContext.fill();
 }
 ```
