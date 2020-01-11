@@ -8,12 +8,14 @@ header:
     title:
       - Zzo blog
     subtitle:
-      - 
+      - Hello World!
     titleColor: 
     titleShadow: true
     titleFontSize: 44
-    subtitleFontSize: 16
-    spaceBetweenTitleSubtitle: 20
+    subtitleColor: 
+    subtitleCursive: true
+    subtitleFontSize: 20
+    spaceBetweenTitleSubtitle: 16
   
   - type: img
     imageSrc: images/header/background.png
