@@ -30,10 +30,10 @@ header:
       -
     subtitle:
       -
-    titleColor: 
+    titleColor:
     titleShadow: false
     titleFontSize: 44
-    subtitleColor: 
+    subtitleColor:
     subtitleCursive: false
     subtitleFontSize: 16
     spaceBetweenTitleSubtitle: 20
