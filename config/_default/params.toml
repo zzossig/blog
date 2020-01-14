@@ -1,6 +1,7 @@
 logoText = "Zzo"
 logoType = "short" # long, short
 description = "쪼식이 블로그"
+useFaviconGenerator = true # https://www.favicon-generator.org/
 
 themeOptions = ["dark", "light", "hacker", "solarized", "kimbie"]
 notAllowedTypesInHome = ["contact", "talks", "about"]
