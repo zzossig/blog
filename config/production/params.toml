@@ -70,8 +70,6 @@ enableComment = true
   twitter = "https://twitter.com/zzossig"
   github = "https://github.com/zzossig/hugo-theme-zzo"
   stack-overflow = "https://stackoverflow.com/users/11747951/zzossig"
-  jianshu = ""
-  zhihu = ""
   
 [copyrightOptions]
   enableCopyrightLink = true
