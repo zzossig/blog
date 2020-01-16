@@ -152,7 +152,7 @@
         height: 30px;
         z-index: z('content');
         line-height: 30px;
-        font-size: $code-font-size;
+        font-size: 14.4px;
         font-family: $title-font;
         font-weight: bold;
         display: inline-block;
@@ -377,7 +377,7 @@
 code, pre {  
   padding: .5rem 0;
   line-height: 1.4;
-  font-size: $code-font-size;
+  font-size: 14.4px;
   font-family: $code-font-stack;
 
   a {
@@ -466,7 +466,7 @@ pre:not(.chroma) {
       width: 100%;
       height: 30px;
       line-height: 30px;
-      font-size: $code-font-size;
+      font-size: 14.4px;
       font-family: $title-font;
       font-weight: bold;
       display: inline-block;
