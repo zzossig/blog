@@ -3,6 +3,7 @@
  */
 body {
   font: normal 125% / 1.4 $text-font-stack;
+  -webkit-text-size-adjust: none;
 }
 
 code,
