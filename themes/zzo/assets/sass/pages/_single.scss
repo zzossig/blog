@@ -126,6 +126,7 @@
       padding: 34px 12px 8px;
       overflow: auto;
       border-radius: 0.34rem;
+      line-height: 1.5;
     }
 
     pre:not(.chroma) {
@@ -376,7 +377,7 @@
 
 code, pre {  
   padding: .5rem 0;
-  line-height: 1.4;
+  line-height: 1.5;
   font-size: 13.8px;
   font-family: $code-font-stack;
   overflow: auto;
