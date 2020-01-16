@@ -481,10 +481,6 @@ pre:not(.chroma) {
   }
 
   .lntd {
-    // Fix code block null line height and
-    // Synchronous gutter and code line highly.
-    line-height: round($code-font-size * 1.5);
-
     &:first-child {
       width: 10px;
       @include no-select;
