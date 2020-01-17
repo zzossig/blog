@@ -1,4 +1,9 @@
 .header {
+  @include flexbox();
+  @include justify-content(center);
+  @include align-items(center);
+  @include flex-direction(column);
+
   .title {
     font-family: $title-font;
     font-weight: 900;
@@ -9,6 +14,7 @@
   @include flexbox();
   @include justify-content(center);
   @include flex-direction(column);
+  @include animation('fade-in .15s .1s 1 ease-in both');
 
   &__title {
     line-height: 1.1;
