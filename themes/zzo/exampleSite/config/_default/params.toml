@@ -6,7 +6,8 @@ custom_js = []
 useFaviconGenerator = true # https://www.favicon-generator.org/
 
 themeOptions = ["dark", "light", "hacker", "solarized", "kimbie"]
-notAllowedTypesInHome = ["contact", "talks", "about"]
+notAllowedTypesInHome = ["contact", "talks", "about", "showcase"]
+notAllowedTypesInHomeSidebar = ["about", "archive", "showcase"]
 
 # header
 homeHeaderType = "text" # text, img, slide
@@ -40,6 +41,8 @@ enableSidebar = true
 enableSidebarTags = true
 enableSidebarSeries = true
 enableSidebarCategories = true
+enableHomeSidebarTitles = true
+enableListSidebarTitles = true
 enableToc = true
 hideToc = false
 enableTocSwitch = true

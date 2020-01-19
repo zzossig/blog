@@ -7,7 +7,6 @@
     {{ .Content }}
   </div>
 </header>
-</span>
 <main class="main archive">
   <div class="archive__container">
     {{ $pages := (where (where .Site.RegularPages "Type" "!=" "about") "Section" "!=" "talks") }}

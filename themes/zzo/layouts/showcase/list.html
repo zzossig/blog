@@ -1,0 +1,24 @@
+{{ define "main" }}
+<main class="main showcase inner">
+  {{ if .Params.enableBio }}
+    <aside class="l showcase__bio">
+      {{ partial "sidebar/site-bio" . }}
+    </aside>
+  {{ end }}
+  <section class="showcase__section {{ if .Params.enableBio }}mr{{ else }}lmr{{ end }}">
+    {{ if .Params.enableBio }}
+      <div class="showcase__bio--mobile hide">
+        {{ partial "body/whoami" . }}
+      </div>
+    {{ end }}
+    {{ partial "showcase/show-nav" . }}
+    {{ if eq .Permalink .FirstSection.Permalink }}
+      {{ partial "showcase/show-pinned" . }}
+    {{ end }}
+  </section>
+  <div class="hide">
+    {{ partial "search/site-search" . }}
+  </div>
+  {{ partial "script/showcase-script" . }}
+</main>
+{{ end }}
