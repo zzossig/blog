@@ -1,4 +1,4 @@
-<div class="showcase__pinned">
+<div>
   {{ $pinnedNum := 0 }}
   {{ $isOdd := false}}
 
@@ -6,7 +6,7 @@
     {{ $pinnedNum = add $pinnedNum (len (where .Pages "Params.pinned" true)) }}
   {{ end }}
 
-  {{ if eq (mod $pinnedNum 2) 1}}
+  {{ if eq (mod $pinnedNum 2) 1 }}
     {{ $isOdd = true }}
   {{ end }}
 

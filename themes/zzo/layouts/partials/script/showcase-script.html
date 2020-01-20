@@ -2,6 +2,8 @@
 <script defer src="{{ $enquire.RelPermalink }}"></script>
 {{ $lazysizes := resources.Get "js/lazysizes.min.js" | resources.Fingerprint }}
 <script defer src="{{ $lazysizes.RelPermalink }}"></script>
+{{ $shave := resources.Get "js/shave.min.js" | resources.Fingerprint }}
+<script defer src="{{ $shave.RelPermalink }}"></script>
 
 <script>
   {{ $enableBio:= .Params.enableBio }}
@@ -55,5 +57,7 @@
       deferSetup: true,
       destroy: function () { },
     });
+
+    shave('.showcase__box--desc', 70);
   });
 </script>
