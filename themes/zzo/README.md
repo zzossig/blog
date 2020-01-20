@@ -15,7 +15,6 @@ Thank you for click me!. Zzo theme is a blog theme powered by Hugo with free(alw
 * [Updating](#updating)
 * [Run example site](#run-example-site)
 * [Configuration](#configuration)
-* [Layout](#layout)
 * [Gallery](#gallery)
 * [Contact Page](#contact-page)
 * [Talks Page](#talks-page)
@@ -266,6 +265,7 @@ enableToc = true # single page table of contents, you can replace this param to 
 hideToc = false # Hide or Show toc
 enableTocSwitch = true # single page table of contents visibility switch
 itemsPerCategory = 5 # maximum number of posts shown in the sidebar.
+sidebarPosition = "right" # bio, profile component layout position
 
 # footer
 showPoweredBy = true # show footer text: Powered by Hugo and Zzo theme
@@ -364,49 +364,6 @@ commento = false
   copyrightLink = ""
   copyrightLinkImage = ""
   copyrightLinkText = ""
-```
-
-## Layout
-
-### CSS grid for layout
-
-Modern CSS grid is the easiest and cleanest way to layout your pages.
-
-The CSS grid layout are in `assets/sass/layout/_grid.scss`. A lot can be done by just reordering "grid-template-rows". 
-
-### grid structure
-
-|  left 	|  right 	|
-|---	|---	|
-|  1	|  2	|
-|  3 	|  4	|
-|  5 	|  6	|
-|  7 	|  8	|
-
-* left, right column width ratio => 5 : 2
-* 1 => .navbar-main
-* 2 => .navbar-side
-* 1 + 2 => .navbar
-* 3 => .header-main
-* 4 => .header-side
-* 3 + 4 => .header
-* 5 => .main-main
-* 6 => .main-side
-* 5 + 6 => .main
-* 7 => .footer-main
-* 8 => .footer-side
-* 7 + 8 => .footer
-
-### grid structure example applied in home page
-
-```html
-<div class="navbar"></div>
-<div class="header"></div>
-<div>
-  <div class="main-main"></div>
-  <div class="main-side"></div>
-</div>
-<div class="footer></div>
 ```
 
 ## Gallery
@@ -586,21 +543,21 @@ enableBio: true # Set to false if you want to hide the bio component.
 ---
 ```
 
-2. Make a category folder and a file at `root/content/showcase/javascript/_index.md` file. (In my case, category is a javascript)
+2. Make a category folder and a file at `root/content/showcase/hugo/_index.md`. (In my case, hugo is a category)
 
 ```yaml
 ---
-title: "Javascript" # category name
+title: "Hugo" # category name
 date: 2020-01-19T21:04:11+09:00
 description: Hugo theme collection # For SEO
-category: theme # meta info appeared on a card bottom side.
+category: theme # meta info appeared on a card bottom side. category in category
 enableBio: true
 ---
 ```
 
-3. Finally, Make a file per project. 
+3. Finally, Make a file per project.
 
-`root/content/showcase/javascript/my-awesome-project.md`.
+`root/content/showcase/hugo/my-awesome-project.md`.
 
 ```yaml
 ---

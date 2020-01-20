@@ -6,19 +6,15 @@
     position: sticky;
     top: $grid_navbar_height * 1.25;
     display: block;
-    margin-top: 1.8rem;
+    margin-top: 1rem;
 
     @media only screen and (max-width: 600px) {
       display: none;
     }
   }
 
-  &__section {
-    
-  }
-
   &__nav {
-    margin: 1rem 0.5rem;
+    margin: 0 0.5rem;
     padding: 0.5rem 0;
     
     @include themify($themes) {
@@ -118,12 +114,16 @@
     }
 
     &--title {
-      z-index: z('card-outter');
       word-break: break-word;
       font-family: $title-font;
       font-size: 1rem;
+      font-weight: bold;
       margin-bottom: 0.5rem;
       cursor: pointer;
+
+      @include themify($themes) {
+        color: themed('title-color');
+      }
     }
 
     &--desc {

@@ -47,6 +47,7 @@ enableToc = true
 hideToc = false
 enableTocSwitch = true
 itemsPerCategory = 5
+sidebarPosition = "right"
 
 # footer
 showPoweredBy = true
