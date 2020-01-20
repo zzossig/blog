@@ -6,7 +6,7 @@
     position: sticky;
     top: $grid_navbar_height * 1.25;
     display: block;
-    margin-top: 2rem;
+    margin-top: 1.8rem;
 
     @media only screen and (max-width: 600px) {
       display: none;
@@ -99,7 +99,6 @@
     }
 
     &--wrapper {
-      z-index: 2;
       @include flexbox();
       @include flex-wrap(wrap);
       @include animation('slide-in-left-little .2s .25s 1 ease-in both');
@@ -119,10 +118,12 @@
     }
 
     &--title {
+      z-index: z('card-outter');
       word-break: break-word;
       font-family: $title-font;
       font-size: 1rem;
       margin-bottom: 0.5rem;
+      cursor: pointer;
     }
 
     &--desc {
@@ -171,13 +172,25 @@
       }
 
       a.type {
+        z-index: z('card-outter');
         text-decoration: none;
+        cursor: pointer;
+
         @include themify($themes) {
           @include on-event {
             color: themed('link-hover');
           }
         }
       }
+    }
+
+    &--link {
+      z-index: z('card-inner');
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
     }
   }
 }
