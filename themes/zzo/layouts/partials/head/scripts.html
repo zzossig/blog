@@ -14,11 +14,42 @@
 <script defer src="{{ $getParents.RelPermalink }}"></script>
 {{ $fadeinout := resources.Get "js/helper/fadeinout.js" | resources.Minify | resources.Fingerprint }}
 <script defer src="{{ $fadeinout.RelPermalink }}"></script>
-
+{{ $closest := resources.Get "js/helper/closest.js" | resources.Minify }}
+<script defer src="{{ $closest.RelPermalink }}"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  
 <script>
   "use strict";
 
   document.addEventListener('DOMContentLoaded', function () {
+    // =========================== tabs ============================
+    document.querySelectorAll('.tab__link') ?
+    document.querySelectorAll('.tab__link').forEach(function(elem) {
+      elem.onclick = function(e) {
+        openCity(e, elem.innerText.toLowerCase());
+      }
+    }) : null;
+
+    function openCity(evt, id) {
+      var i, tabcontent, tablinks;
+
+      tabcontent = document.getElementsByClassName("tab__content");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      tablinks = document.getElementsByClassName("tab__link");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      document.getElementById(id).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    // =============================================================
+
+
     // ========================= go to top =========================
     var gttBtn = document.getElementById("gtt");
     gttBtn.style.display = "none";
