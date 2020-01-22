@@ -11,7 +11,6 @@ series:
 -
 categories:
 -
-featured_image:
 featured_image: feature4/divide.png
 ---
 
