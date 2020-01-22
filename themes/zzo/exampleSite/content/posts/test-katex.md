@@ -16,10 +16,10 @@ libraries:
 featured_image: "feature2/mathbook.png"
 ---
 
-{{< boxmd >}}
+{{< box >}}
 We need goldmark katex entension which is not yet we have: 
 [https://github.com/gohugoio/hugo/issues/6544](https://github.com/gohugoio/hugo/issues/6544)
-{{< /boxmd >}}
+{{< /box >}}
 
 
 The following

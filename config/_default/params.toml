@@ -3,7 +3,7 @@ logoType = "short" # long, short
 description = "쪼식이 블로그"
 useFaviconGenerator = true # https://www.favicon-generator.org/
 
-themeOptions = ["dark", "light", "hacker", "solarized", "kimbie"]
+themeOptions = ["hacker", "light", "dark", "solarized", "kimbie"]
 notAllowedTypesInHome = ["contact", "talks", "about", "showcase"]
 notAllowedTypesInHomeSidebar = ["about", "archive", "showcase"]
 notAllowedTypesInArchive = ["about", "talks", "showcase"]
@@ -43,10 +43,10 @@ enableHomeSidebarTitles = true
 enableListSidebarTitles = true
 enableToc = true
 hideToc = false
-tocPosition = "inner" # inner, outer
+tocPosition = "outer" # inner, outer
 enableTocSwitch = true
 itemsPerCategory = 5
-sidebarPosition = "right"
+sidebarPosition = "left"
 
 # footer
 showPoweredBy = true
