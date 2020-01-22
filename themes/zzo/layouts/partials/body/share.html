@@ -1,0 +1,25 @@
+{{ if ($.Param "share") }}
+  {{ if gt (len ($.Param "share").options) 0 }}
+    <div class="share">
+      <div class="donation__message">
+        {{ i18n "share-message" }}
+      </div>
+      <div class="donation__icons">
+        {{ $ctx := . }}
+        {{ range $.Param "share.options" }}
+          {{ if eq (lower .) "facebook" }}
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ $ctx.Permalink }}" title="{{ . }}" aria-label="{{ . }}" class="share__item" target="_blank" rel="noreferrer">
+              <img src="https://img.shields.io/badge/{{ . }}----?style=social&logo={{ . }}" alt="{{ . }}" />
+            </a>
+          {{ else if eq . "twitter" }}
+            <a href="https://twitter.com/intent/tweet?text={{ $ctx.Title }}" title="{{ . }}" aria-label="{{ . }}" class="share__item" target="_blank" rel="noreferrer">
+              <img src="https://img.shields.io/badge/{{ . }}----?style=social&logo={{ . }}" alt="{{ . }}" />
+            </a>
+          {{ else }}
+            
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  {{ end }}
+{{ end }}

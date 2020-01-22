@@ -80,3 +80,13 @@ enableComment = false
   copyrightLink = "http://creativecommons.org/licenses/by-sa/4.0/"
   copyrightLinkImage = ""
   copyrightLinkText = "CC BY-SA"
+
+[donationOptions]
+  enable = true
+  alipay = "1"
+  wechat = "1"
+  paypal = "https://google.com"
+  patreon = "https://google.com"
+
+[share]
+  options = ["facebook","twitter"]
