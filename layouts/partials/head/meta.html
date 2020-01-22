@@ -13,7 +13,7 @@
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:description" content="{{ $.Param "description" }}">
 {{ $ctx := . }}
-{{ with $.Param "featured_image" }}<meta property="og:image" content="{{ . | absLangURL }}">{{ end }}
+{{ with $.Param "featured_image" }}<meta property="og:image:url" content="{{ . | absLangURL }}">{{ end }}
 {{ hugo.Generator }}
 <meta name="msapplication-TileColor" content="{{ $.Param "themecolor" | default "#ffffff" }}">
 <meta name="theme-color" content="{{ $.Param "themecolor" | default "#ffffff" }}">
