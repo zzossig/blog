@@ -8,7 +8,22 @@
         {{ $ctx := . }}
         {{ range $.Param "share.options" }}
           {{ if eq (lower .) "facebook" }}
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A{{ $ctx.Permalink }}" title="{{ . }}" aria-label="{{ . }}" class="share__item" target="_blank" rel="noreferrer">
+            <!-- Load Facebook SDK for JavaScript -->
+            <div id="fb-root"></div>
+            <script>(function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+                fjs.parentNode.insertBefore(js, fjs);
+              }(document, 'script', 'facebook-jssdk'));
+            </script>
+
+            <!-- Your share button code -->
+            <div class="fb-share-button" data-href="https://www.facebook.com/sharer/sharer.php?u=https%3A{{ $ctx.Permalink | absLangURL }}">
+            </div>
+
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A{{ $ctx.Permalink | absLangURL }}" title="{{ . }}" aria-label="{{ . }}" class="share__item" target="_blank" rel="noreferrer">
               <img src="https://img.shields.io/badge/{{ . }}----?style=social&logo={{ . }}" alt="{{ . }}" />
             </a>
           {{ else if eq . "twitter" }}
