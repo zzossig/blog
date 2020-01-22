@@ -11,9 +11,9 @@ categories:
 featured_image: feature2/minimum-value.png
 ---
 
-{{< box >}}
+{{< boxmd >}}
 참고: [Do ES6 Modules make the case of IIFEs obsolete?](https://hashnode.com/post/do-es6-modules-make-the-case-of-iifes-obsolete-civ96wet80scqgc538un20es0)
-{{< /box >}}
+{{< /boxmd >}}
 
 ## IIFE란?
 

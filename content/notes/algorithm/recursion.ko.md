@@ -14,9 +14,9 @@ categories:
 featured_image: feature4/recursion.png
 ---
 
-{{< box >}}
+{{< boxmd >}}
 Collect all of the odd values in an array
-{{< /box >}}
+{{< /boxmd >}}
 
 ## Solutions - Helper Method Recursion
 

@@ -30,19 +30,25 @@
     &:first-child {
       border-top-left-radius: 0.25rem;
     }
-
+    
+    @include transition(all, 0.2s, ease-in);
     @include themify($themes) {
       color: themed('navbar-title-color');
+      border-top: 1px solid transparent;
       &.active {
-        border-bottom: 1px solid themed('navbar-title-active-color');
+        border-top: 1px solid themed('content-pre-header-background-color');
       }
     }
 
     @include themify($codeblock) {
       background-color: themed('content-pre-header-background-color');
 
+      &.active {
+        background-color: themed('content-pre-background-color');
+      }
+
       @include on-event {
-        background-color: themed('navbar-menu-hover-background-color');
+        background-color: themed('content-pre-background-color');
       }
     }
   }

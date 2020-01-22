@@ -17,7 +17,7 @@ featured_image: feature4/window.png
 
 ## Problem
 
-{{< box >}}
+{{< boxmd >}}
 
 Write a function called maxSubarraySum which accepts an array of integers and a number called **n**. The function should calculate the maximum sum of **n** consecutive elements in the array.
 
@@ -29,7 +29,7 @@ maxSubarraySum([4,2,1,6,2], 4) // 13
 maxSubarraySum([], 4) // null
 ```
 
-{{< /box >}}
+{{< /boxmd >}}
 
 ## Solutions
 
