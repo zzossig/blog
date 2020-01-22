@@ -12,7 +12,7 @@ series:
 -
 categories:
 -
-featured_image: images/feature4/Flipboard.png
+featured_image: feature4/Flipboard.png
 ---
 
 ## canvas?
