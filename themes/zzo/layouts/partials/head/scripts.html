@@ -148,7 +148,7 @@
                 });
               }) : null;
 
-              var curElem = tableOfContentsElem.querySelector(`[href="#${id}"]`);
+              var curElem = tableOfContentsElem.querySelector("[href='#" + id + "']");
               if (curElem && curElem.nextElementSibling) {
                 curElem.nextElementSibling.style.display = 'block';
               }
@@ -193,7 +193,7 @@
                 });
               });
 
-              var curElem = tableOfContentsElem.querySelector(`[href="#${id}"]`);
+              var curElem = tableOfContentsElem.querySelector("[href='#" + id + "']");
               if (curElem && curElem.nextElementSibling) {
                 curElem.nextElementSibling.style.display = 'block';
               }
@@ -313,8 +313,9 @@
     var rootEleme = document.getElementById('root');
     var selectThemeElem = document.querySelectorAll('.select-theme');
     var selectThemeItemElem = document.querySelectorAll('.select-theme__item');
-    
+    console.log('start');
     if (localTheme) {
+      console.log("localTheme: ", localTheme);
       selectThemeItemElem ? 
       selectThemeItemElem.forEach(function (elem) {
         if (elem.text.trim() === localTheme) {
@@ -327,12 +328,13 @@
 
     selectThemeItemElem ? 
     selectThemeItemElem.forEach(function (v, i) {
+      console.log(i);
       v.addEventListener('click', function (e) {
         var selectedThemeVariant = e.target.text.trim();
         localStorage.setItem('theme', selectedThemeVariant);
 
         rootEleme.removeAttribute('class');
-        rootEleme.classList.add(`theme__${selectedThemeVariant}`);
+        rootEleme.classList.add('theme__' + selectedThemeVariant);
         selectThemeElem.forEach(function(rootElem) {
           rootElem.querySelectorAll('a').forEach(function (elem) {
             if (elem.classList) {
@@ -445,7 +447,7 @@
           });
         }
         else {
-          console.error(`[${xhr.status}]Error:`, xhr.statusText);
+          console.error('[' + xhr.status + ']Error:', xhr.statusText);
         }
       };
       xhr.send();
@@ -464,7 +466,7 @@
           var item = document.createElement('a');
           item.setAttribute('href', result.uri);
           item.setAttribute('class', 'dropdown-item');
-          item.innerHTML = `<div class="menu-item"><div class="menu-item__title">📄 ${result.title}</div><div class="menu-item__desc">${result.description ? result.description : result.content}</div></div>`;
+          item.innerHTML = '<div class="menu-item"><div class="menu-item__title">📄 ' + result.title + '</div><div class="menu-item__desc">' + (result.description ? result.description : result.content) + '</div></div>';
           content.appendChild(item);
         });
       } else {
@@ -495,7 +497,7 @@
           var item = document.createElement('a');
           item.setAttribute('href', result.item.uri);
           item.setAttribute('class', 'dropdown-item');
-          item.innerHTML = `<div class="menu-item"><div class="menu-item__title">📄 ${generateHighlightedText(result.item.title, result.matches[0].indices)}</div><div class="menu-item__desc">${result.matches[1] ? generateHighlightedText(result.item.description, result.matches[1].indices) : result.matches[2] ? generateHighlightedText(result.item.content, result.matches[2].indices) : ''}</div></div>`;
+          item.innerHTML = '<div class="menu-item"><div class="menu-item__title">📄 ' + generateHighlightedText(result.item.title, result.matches[0].indices) + '</div><div class="menu-item__desc">' + (result.matches[1] ? generateHighlightedText(result.item.description, result.matches[1].indices) : result.matches[2] ? generateHighlightedText(result.item.content, result.matches[2].indices) : '') + '</div></div>';
           content.appendChild(item);
         });
       } else {
@@ -523,7 +525,7 @@
         results.forEach(function (result) {
           var item = document.createElement('a');
           item.setAttribute('href', result.uri);
-          item.innerHTML = `<div class="mobile-search__item"><div class="mobile-search__item--title">📄 ${result.title}</div><div class="mobile-search__item--desc">${result.description ? result.description : result.content}</div></div>`;
+          item.innerHTML = '<div class="mobile-search__item"><div class="mobile-search__item--title">📄 ' + result.title + '</div><div class="mobile-search__item--desc">' + (result.description ? result.description : result.content) + '</div></div>';
           content.appendChild(item);
         });
       } else {
@@ -548,7 +550,7 @@
         results.forEach(function (result) {
           var item = document.createElement('a');
           item.setAttribute('href', result.item.uri);
-          item.innerHTML = `<div class="mobile-search__item"><div class="mobile-search__item--title">📄 ${generateHighlightedText(result.item.title, result.matches[0].indices)}</div><div class="mobile-search__item--desc">${result.matches[1] ? generateHighlightedText(result.item.description, result.matches[1].indices) : result.matches[2] ? generateHighlightedText(result.item.content, result.matches[2].indices) : ''}</div></div>`;
+          item.innerHTML = '<div class="mobile-search__item"><div class="mobile-search__item--title">📄 ' + generateHighlightedText(result.item.title, result.matches[0].indices) + '</div><div class="mobile-search__item--desc">' + (result.matches[1] ? generateHighlightedText(result.item.description, result.matches[1].indices) : result.matches[2] ? generateHighlightedText(result.item.content, result.matches[2].indices) : '') + '</div></div>';
           content.appendChild(item);
         });
       } else {

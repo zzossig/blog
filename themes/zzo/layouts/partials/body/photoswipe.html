@@ -148,6 +148,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  /*var galleryContainerElemImgs = galleryContainerElem.querySelectorAll('img');
+  galleryContainerElemImgs = [].slice.call(galleryContainerElemImgs);*/
+
   galleryContainerElem.querySelectorAll('img').forEach(function (elem, idx) {
     elem.style.cursor = 'pointer';
 

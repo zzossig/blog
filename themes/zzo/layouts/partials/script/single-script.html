@@ -145,7 +145,7 @@
             });
           }) : null;
 
-          var curElem = tableOfContentsElem.querySelector(`[href="#${id}"]`);
+          var curElem = tableOfContentsElem.querySelector('[href="#' + id + '"]');
           if (curElem && curElem.nextElementSibling) {
             curElem.nextElementSibling.style.display = 'block';
           }

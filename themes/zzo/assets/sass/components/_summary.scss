@@ -142,7 +142,7 @@
       padding: 0.25rem;
       margin-right: .5rem;
       
-      @include transition(all, 0.25s, ease-in);
+      @include transition(all, 0.2s, ease-out);
       @include align-self(center);
       @include on-event {
         @include box-shadow(1px, 1px, 3px, 0px, rgba(0, 0, 0, 0.25));
