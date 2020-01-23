@@ -90,4 +90,4 @@ enableComment = false
   patreon = ""
 
 [share]
-  options = ["facebook","twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line"]
+  options = ["facebook", "twitter", "reddit", "linkedin", "tumblr", "line"]

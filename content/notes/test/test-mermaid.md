@@ -13,7 +13,6 @@ categories:
 - diagram
 libraries:
 - mermaid
-featured_image: "feature2/workflow.png"
 ---
 
 ```mermaid

@@ -3,7 +3,6 @@ header:
   - type: text
     height: 190
     paddingX: 50
-    paddingY: 0
     align: center
     title:
       - Zzo blog

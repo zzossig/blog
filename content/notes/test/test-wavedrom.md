@@ -13,7 +13,6 @@ categories:
 - diagram
 libraries:
 - wavedrom
-featured_image: "feature1/wave.png"
 ---
 
 ```wave

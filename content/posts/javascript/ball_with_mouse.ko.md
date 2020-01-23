@@ -15,6 +15,19 @@ categories:
 featured_image: feature4/Flipboard.png
 ---
 
+{{< codes java javascript >}}
+  {{< code >}}
+  ```java
+  System.out.println('Hello World!');
+  ```
+  {{< /code >}}
+  {{< code >}}
+  ```javascript
+  console.log('Hello World!');
+  ```
+  {{< /code >}}
+{{< /codes >}}
+
 ## canvas?
 
 canvas가 HTML5에서 도입되었다는 것은 익히 알고 있었지만, canvas가 뭐에 쓰는 건지 몰라 답답하던 차에 알아보게 되었다.

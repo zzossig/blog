@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   MicroModal.init({
-    onClose: () => {
+    onClose: function () {
       if (mySwipe) {
         mySwipe.kill();
         mySwipe = null;
@@ -147,9 +147,6 @@ document.addEventListener('DOMContentLoaded', function () {
       newImg.src = src;
     });
   }
-
-  /*var galleryContainerElemImgs = galleryContainerElem.querySelectorAll('img');
-  galleryContainerElemImgs = [].slice.call(galleryContainerElemImgs);*/
 
   galleryContainerElem.querySelectorAll('img').forEach(function (elem, idx) {
     elem.style.cursor = 'pointer';

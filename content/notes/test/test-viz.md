@@ -13,7 +13,6 @@ categories:
 - diagram
 libraries:
 - viz
-featured_image: "feature2/graph.png"
 ---
 
 ```viz-dot

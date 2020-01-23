@@ -50,7 +50,7 @@
     @include flex-shrink(0);  
   }
 
-  &__burger {        
+  &__burger {
     display: none;
     position: relative;
 
@@ -100,7 +100,6 @@
         }        
       }
 
-      // Modifers
       &.is-active {
         display: block;
         span {
@@ -212,13 +211,15 @@
 
     &.is-active {
       position: absolute;
+      top: $grid_navbar_height;
+      left: 0;
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+
       @include flexbox();
       @include flex-direction(column);
       @include align-items(flex-start);
-      top: 100%;
-      width: 100%;
-      height: auto;      
-      overflow: hidden;
       @include themify($themes) {        
         border-top: 1px solid themed('navbar-border-bottom-color');
         background-color: themed('navbar-mobile-background-color');
