@@ -82,12 +82,12 @@ enableComment = false
   copyrightLinkText = "CC BY-SA"
 
 [donationOptions]
-  enable = true
-  alipay = "1"
-  wechat = "1"
-  bitcoin = "1"
-  paypal = "https://google.com"
-  patreon = "https://google.com"
+  enable = false
+  alipay = ""
+  wechat = ""
+  bitcoin = ""
+  paypal = ""
+  patreon = ""
 
 [share]
-  options = ["facebook","twitter", "reddit", "linkedin", "tumblr"]
+  options = ["facebook","twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line"]

@@ -373,6 +373,9 @@ commento = false
   copyrightLink = ""
   copyrightLinkImage = ""
   copyrightLinkText = ""
+
+[share]
+  options = ["facebook","twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line"]
 ```
 
 ## Gallery

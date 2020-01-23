@@ -15,6 +15,21 @@ categories:
 featured_image: feature4/compass.png
 ---
 
+`console.log(1);`
+
+```
+  console.log(1);
+  console.log(2);
+  console.log(3);
+  ```
+
+- adsgiasdjg
+  ```
+  console.log(1);
+  console.log(2);
+  console.log(3);
+  ```
+
 ```html
 <div class="navbar__wrapper">
   <nav class="navbar">

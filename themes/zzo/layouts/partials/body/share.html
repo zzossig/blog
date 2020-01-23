@@ -29,9 +29,24 @@
               {{ i18n "linkedin" | default "LinkedIn" }}
             </a>
           {{ else if eq (lower .) "tumblr" }}
-            <a class="donation__item" href="http://tumblr.com/widgets/share/tool?canonicalUrl={{ $ctx.Permalink | absLangURL }}&data-title={{ $ctx.Title }}&data-content={{ $ctx.Description }}">
+            <a href="http://tumblr.com/widgets/share/tool?canonicalUrl={{ $ctx.Permalink | absLangURL }}&data-title={{ $ctx.Title }}&data-content={{ $ctx.Description }}" class="donation__item" target="_blank" rel="noreferer">
               {{ partial "svgs/share/tumblr.svg" (dict "width" 22 "height" 22) }}
               {{ i18n "linkedin" | default "LinkedIn" }}
+            </a>
+          {{ else if eq (lower .) "weibo" }}
+            <a href="javascript:void(function(){var d=document,e=encodeURIComponent,s1=window.getSelection,s2=d.getSelection,s3=d.selection,s=s1?s1():s2?s2():s3?s3.createRange().text:'',r='http://service.weibo.com/share/share.php?url='+e(d.location.href)+'&title='+e(d.title),x=function(){if(!window.open(r,'weibo','toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330'))location.href=r+'&r=1'};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})()" class="donation__item" target="_blank" rel="noreferer">
+              {{ partial "svgs/share/weibo.svg" (dict "width" 22 "height" 22) }}
+              {{ i18n "weibo" | default "Weibo" }}
+            </a>
+          {{ else if eq (lower .) "douban" }}
+            <a href="javascript:void(function(){var d=document,e=encodeURIComponent,s1=window.getSelection,s2=d.getSelection,s3=d.selection,s=s1?s1():s2?s2():s3?s3.createRange().text:'',r='https://www.douban.com/recommend/?url='+e(d.location.href)+'&title='+e(d.title)+'&sel='+e(s)+'&v=1',w=450,h=330,x=function(){if(!window.open(r,'douban','toolbar=0,resizable=1,scrollbars=yes,status=1,width='+w+',height='+h+',left='+(screen.width-w)/2+',top='+(screen.height-h)/2))location.href=r+'&r=1'};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})()" class="donation__item" target="_blank" rel="noreferer">
+              {{ partial "svgs/share/douban.svg" (dict "width" 22 "height" 22) }}
+              {{ i18n "douban" | default "Douban" }}
+            </a>
+          {{ else if eq (lower .) "line" }}
+            <a href="https://social-plugins.line.me/lineit/share?url={{ $ctx.Permalink | absLangURL }}" class="donation__item" target="_blank" rel="noreferer">
+              {{ partial "svgs/share/line.svg" (dict "width" 22 "height" 22) }}
+              {{ i18n "line" | default "Line" }}
             </a>
           {{ end }}
         {{ end }}

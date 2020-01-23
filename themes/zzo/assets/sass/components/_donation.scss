@@ -1,14 +1,12 @@
 .donation {
   margin: 2.5rem 0;
+  position: relative;
   
   &__icons {
     @include flexbox();
     @include align-items(center);
     @include justify-content(center);
-    
-    @media only screen and (max-width: 769px) {
-      @include flex-direction(column);
-    }
+    @include flex-wrap(wrap);
 
     a {
       text-decoration: none !important;
@@ -53,6 +51,11 @@
   &__dropup {
     position: relative;
     height: 100%;
+
+    @media only screen and (max-width: 769px) {
+      position: static;
+    }
+
     &--content {
       display: none;
       position: absolute;
