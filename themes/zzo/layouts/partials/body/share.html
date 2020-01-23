@@ -28,6 +28,11 @@
               {{ partial "svgs/share/linkedin.svg" (dict "width" 22 "height" 22) }}
               {{ i18n "linkedin" | default "LinkedIn" }}
             </a>
+          {{ else if eq (lower .) "tumblr" }}
+            <a class="donation__item" href="http://tumblr.com/widgets/share/tool?canonicalUrl={{ $ctx.Permalink | absLangURL }}&data-title={{ $ctx.Title }}&data-content={{ $ctx.Description }}">
+              {{ partial "svgs/share/tumblr.svg" (dict "width" 22 "height" 22) }}
+              {{ i18n "linkedin" | default "LinkedIn" }}
+            </a>
           {{ end }}
         {{ end }}
       </div>
