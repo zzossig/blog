@@ -63,7 +63,7 @@ busuanziSitePV = true
 busuanziPagePV = true
 
 # comment
-enableComment = true
+enableComment = false
 
 [utterances]       # https://utteranc.es/
   owner = "zzossig"              # Your GitHub ID
@@ -83,10 +83,11 @@ enableComment = true
 
 [donationOptions]
   enable = true
-  alipay = ""
-  wechat = ""
+  alipay = "1"
+  wechat = "1"
+  bitcoin = "1"
   paypal = "https://google.com"
   patreon = "https://google.com"
 
 [share]
-  options = ["facebook","twitter"]
+  options = ["facebook","twitter", "reddit", "linkedin"]

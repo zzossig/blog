@@ -82,6 +82,4 @@ enableComment = true
   copyrightLink = "http://creativecommons.org/licenses/by-sa/4.0/"
   copyrightLinkImage = ""
   copyrightLinkText = "CC BY-SA"
-
-[share]
-  options = ["facebook","twitter"]
+  
