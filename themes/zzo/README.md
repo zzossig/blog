@@ -367,8 +367,12 @@ commento = false
   copyrightLinkImage = ""
   copyrightLinkText = ""
 
-[share]
-  options = ["facebook","twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line"]
+# possible share name: ["facebook","twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line"]
+[[share]]
+  name = "facebook"
+[[share]]
+  name = "twitter"
+  username = ""
 ```
 
 ## Gallery
@@ -1067,6 +1071,10 @@ Some markdown contents
 `````
 
 ### tab / tabs => Tabs make it easy to explore and switch between different views
+
+⚠️Becareful that the content in the tab should be different from each other.
+The tab makes unique id hashes depending on the tab contents.
+So, If you just copy-paste the tabs with multiple times, since it has the same contents, the tab will not work.
 
 `````
 {{< tabs Windows MacOS Ubuntu >}}

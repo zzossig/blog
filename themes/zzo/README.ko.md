@@ -374,8 +374,12 @@ commento = false
   copyrightLinkImage = ""
   copyrightLinkText = ""
 
-[share]
-  options = ["facebook","twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line"]
+# possible share name: ["facebook","twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line"]
+[[share]]
+  name = "facebook"
+  username = ""
+[[share]]
+  name = "twitter"
 ```
 
 ## Gallery
@@ -1074,6 +1078,8 @@ Some markdown contents
 `````
 
 ### tab / tabs => 여러 버전의 뷰를 제공할 때 쓰세요
+
+탭을 만들 때, 각 탭마다 안의 내용에 따라 고유 아이디를 부여하기 때문에, Tab 안에 있는 내용이 서로 달라야합니다.
 
 `````
 {{< tabs Windows MacOS Ubuntu >}}
