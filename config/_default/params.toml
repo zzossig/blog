@@ -88,35 +88,3 @@ enableComment = false
   bitcoin = ""
   paypal = ""
   patreon = ""
-
-[[share]]
-  name = "facebook"
-  username = "zzossig"
-  
-[[share]]
-  name = "twitter"
-  username = "zzossig"
-
-[[share]]
-  name = "reddit"
-  username = "zzossig"
-
-[[share]]
-  name = "linkedin"
-  username = "zzossig"
-
-[[share]]
-  name = "tumblr"
-  username = "zzossig"
-
-[[share]]
-  name = "weibo"
-  username = "zzossig"
-
-[[share]]
-  name = "douban"
-  username = "zzossig"
-
-[[share]]
-  name = "line"
-  username = "zzossig"
