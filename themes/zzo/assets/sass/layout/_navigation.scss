@@ -325,7 +325,7 @@
       }      
     }
 
-    &-trigger {      
+    &-trigger {
       padding: 0.5rem;
       cursor: pointer;
       border: none;
@@ -400,7 +400,6 @@
   right: 35px * 2;
   width: 35px;
   height: $grid_navbar_height;
-  padding: 0.25rem;
   cursor: pointer;
   z-index: z('modal');
 
@@ -432,12 +431,12 @@
     }
 
     &-trigger {
-      padding: 0.5rem;
+      padding: 0.25rem;
       cursor: pointer;
       border: none;      
       outline: none;
       width: 35px;
-      height: $grid_navbar_height;
+      height: $grid_navbar_height !important;
       color: inherit;
       background-color: inherit;
     }
