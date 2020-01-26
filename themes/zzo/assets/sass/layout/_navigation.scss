@@ -188,7 +188,9 @@
       @include justify-content(center);
       @include no-select;
       @include themify($themes) {
-        color: themed('navbar-title-color');        
+        color: themed('navbar-title-color');
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid themed('navbar-border-bottom-color');
         @include on-event {
           color: themed('navbar-title-hover-color');
           background-color: themed('navbar-menu-hover-background-color');
@@ -208,10 +210,6 @@
         width: 100%;
         padding: 0 0.75rem;
       }
-    }
-
-    &-icon {
-      margin-top: 0.4rem;
     }
 
     &.is-active {
