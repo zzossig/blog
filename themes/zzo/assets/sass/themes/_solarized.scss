@@ -15,7 +15,7 @@ $solarized: (
     dropdown-item-hover-background-color: darken(#FBF1D1, 5%),
     dropdown-item-hover-color: #B58900,
     dropdown-item-color: #424242,    
-    navbar-border-bottom-color: #B58900,
+    navbar-border-bottom-color: #eddc9f,
     navbar-background-color: #EEE8D5,
     navbar-mobile-background-color: darken(#EEE8D5, 2.5%),
     navbar-title-color: #586e75,
@@ -102,5 +102,6 @@ $solarized: (
     custom-scrollbar-background-color: #EEE8D5,
     share-color: #f9fbe7,
     share-shadow-color: #727072,
-    share-background-color: lighten(#cb4b16, 7.5%),
+    share-background-color: #99907a,
+    donation-background-color: #c5e0df,
 );

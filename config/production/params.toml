@@ -4,7 +4,6 @@ description = "쪼식이 블로그"
 custom_css = []
 custom_js = []
 useFaviconGenerator = true # https://www.favicon-generator.org/
-languagedir = "ltr" # ltr / rtl
 
 themeOptions = ["hacker", "light", "dark", "solarized", "kimbie"]
 notAllowedTypesInHome = ["contact", "talks", "about", "showcase"]
@@ -27,10 +26,11 @@ paginateWindow = 1
 talksPaginate = 8
 talksGroupByDate = "2006"
 
-# whoami
+# bio, whoami
 myname = "최성환"
 email = "zzossig@gmail.com"
 whoami = "📚Learner🤓Nerd🌐Web Developer"
+bioImageUrl = ""
 useGravatar = true
 location = "Seoul, Korea"
 organization = ""

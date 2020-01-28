@@ -2,8 +2,10 @@
   title = "쪼식이 블로그"
   languageName = "한국어"
   weight = 1
+  languagedir = "ltr"
   
 [en]
   title = "Zzossig's Blog"
   languageName = "English"
   weight = 2
+  languagedir = "ltr"

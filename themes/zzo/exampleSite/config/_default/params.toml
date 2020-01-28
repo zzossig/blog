@@ -32,6 +32,7 @@ talksGroupByDate = "2006"
 myname = "zzossig"
 email = "zzossig@gmail.com"
 whoami = "Web Developer"
+bioImageUrl = ""
 useGravatar = false
 location = "Seoul, Korea"
 organization = "Hugo"
@@ -137,6 +138,8 @@ commento = false
   mastodon = ""
   jianshu = ""
   zhihu = ""
+  signal = ""
+  whatsapp = ""
 
 [donationOptions]
   enable = false
@@ -145,5 +148,9 @@ commento = false
   paypal = ""
   patreon = ""
 
-[share]
-  # options = ["facebook","twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line"]
+# possible share name: ["facebook","twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line"]
+[[share]]
+  name = "facebook"
+  username = ""
+[[share]]
+  name = "twitter"

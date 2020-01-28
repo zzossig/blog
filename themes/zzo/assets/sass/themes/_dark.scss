@@ -15,7 +15,7 @@ $dark: (
     dropdown-item-hover-background-color: #727072,
     dropdown-item-hover-color: #FCFCFA,
     dropdown-item-color: #FCFCFA,    
-    navbar-border-bottom-color: #2D2A2E,
+    navbar-border-bottom-color: #4e4e4e,
     navbar-background-color: #403E41,
     navbar-mobile-background-color: #3a3a3a,
     navbar-title-color: #FCFCFA,
@@ -104,5 +104,6 @@ $dark: (
     custom-scrollbar-background-color: #eee,
     share-color: #dbdbdb,
     share-shadow-color: #888,
-    share-background-color: lighten(#403E41, 5%),
+    share-background-color: lighten(#403E41, 2.5%),
+    donation-background-color: #525252,
 );
