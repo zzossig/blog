@@ -20,7 +20,7 @@
           {{ with $params.Description }}
             {{ . }}
           {{ else }}
-            {{ .Summary }}
+            {{ .Summary | safeHTML }}
           {{ end }}
         </div>
       </div>

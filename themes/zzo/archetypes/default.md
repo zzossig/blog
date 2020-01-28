@@ -14,5 +14,3 @@ series:
 categories:
 -
 ---
-
-<!--more-->
