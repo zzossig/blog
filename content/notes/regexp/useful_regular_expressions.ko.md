@@ -1,7 +1,7 @@
 ---
 title: "자바스크립트 유용한 정규식 모음"
 date: 2020-01-08T18:22:00+09:00
-# description: 이메일, 날짜, 비밀번호... 등등의 Regular Expreessions
+description: 이메일, 날짜, 비밀번호... 등등의 Regular Expreessions
 draft: false
 enableTocContent: false
 tags:
@@ -12,8 +12,6 @@ categories:
 -
 featured_image: feature4/regexp.png
 ---
-
-Here is my pure CSS implementation of simple blockquote style, based on this article. I will explain every line of CSS being used as CSS comments - you will need most of them.
 
 ## 이메일
 
