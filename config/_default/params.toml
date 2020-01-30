@@ -47,7 +47,7 @@ hideToc = false
 tocPosition = "outer" # inner, outer
 enableTocSwitch = true
 itemsPerCategory = 5
-sidebarPosition = "right"
+sidebarPosition = "left"
 
 # footer
 showPoweredBy = true
