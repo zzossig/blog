@@ -44,6 +44,7 @@ enableHomeSidebarTitles = true
 enableListSidebarTitles = true
 enableToc = true
 hideToc = false
+tocFolding = true
 tocPosition = "outer" # inner, outer
 enableTocSwitch = true
 itemsPerCategory = 5
