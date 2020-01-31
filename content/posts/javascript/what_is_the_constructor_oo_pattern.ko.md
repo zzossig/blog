@@ -8,7 +8,7 @@ series:
 -
 categories:
 -
-featured_image: feature3/construction.png
+image: images/feature3/construction.png
 ---
 
 ## 자바스크립트에서 생성자(constructor)의 의미

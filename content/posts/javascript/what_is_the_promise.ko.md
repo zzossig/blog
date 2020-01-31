@@ -8,7 +8,7 @@ series:
 -
 categories:
 -
-featured_image: feature3/promise.png
+image: images/feature3/promise.png
 ---
 
 ## 비동기란?

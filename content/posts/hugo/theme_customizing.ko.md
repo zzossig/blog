@@ -8,7 +8,7 @@ series:
 - hugo
 categories:
 -
-featured_image: feature1/design.png
+image: images/feature1/design.png
 ---
 
 ## layouts 폴더

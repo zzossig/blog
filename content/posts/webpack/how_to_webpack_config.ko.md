@@ -8,7 +8,7 @@ series:
 - webpack
 categories:
 -
-featured_image: feature1/webpack-config.png
+image: images/feature1/webpack-config.png
 ---
 
 ## Webpack, 들어는 봤는데...

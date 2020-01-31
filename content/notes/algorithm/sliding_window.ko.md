@@ -11,8 +11,7 @@ series:
 -
 categories:
 -
-featured_image:
-featured_image: feature4/window.png
+image: images/feature4/window.png
 ---
 
 ## Problem

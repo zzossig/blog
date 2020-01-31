@@ -10,7 +10,7 @@ series:
 -
 categories:
 -
-featured_image: feature4/save-archive.png
+image: images/feature4/save-archive.png
 ---
 
 ## 이메일

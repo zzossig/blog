@@ -11,7 +11,7 @@ series:
 -
 categories:
 -
-featured_image: feature4/divide.png
+image: images/feature4/divide.png
 ---
 
 {{< boxmd >}}

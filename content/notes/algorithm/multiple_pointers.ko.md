@@ -11,7 +11,7 @@ series:
 -
 categories:
 -
-featured_image: feature4/rubiks-cube.png
+image: images/feature4/rubiks-cube.png
 ---
 
 ## Problem 1

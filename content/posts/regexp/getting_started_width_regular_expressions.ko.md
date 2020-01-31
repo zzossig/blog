@@ -8,7 +8,7 @@ series:
 - 정규식
 categories:
 -
-featured_image: feature3/variable.png
+image: images/feature3/variable.png
 ---
 
 ## 정규식 생성 방법

@@ -8,7 +8,7 @@ series:
 -
 categories:
 - 란?
-featured_image: feature2/hunt.png
+image: images/feature2/hunt.png
 ---
 
 ## 자바스크립트의 변수 범위

@@ -8,7 +8,7 @@ series:
 -
 categories:
 - 개념
-featured_image: feature1/flow.png
+image: images/feature1/flow.png
 ---
 
 ## Serialization(직렬화) 비유

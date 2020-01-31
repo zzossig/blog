@@ -8,7 +8,7 @@ series:
 -
 categories:
 -
-featured_image: feature2/copy.png
+image: images/feature2/copy.png
 ---
 
 기본적으로 자바스크립트에서 깊은 복사, 얕은 복사를 논할 때는 object나 array 같은 reference type을 다룬다는 전제를 깔고 들어간다.

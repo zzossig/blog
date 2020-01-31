@@ -8,7 +8,7 @@ series:
 - 
 categories:
 - 란?
-featured_image: feature2/crane.png
+image: images/feature2/crane.png
 ---
 
 ## 변수 호이스팅

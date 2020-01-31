@@ -12,7 +12,7 @@ keywords:
 - hugo
 - hugo-theme
 - 휴고 테마
-featured_image: feature1/apply-theme.png
+image: images/feature1/apply-theme.png
 ---
 
 ## Zzo 테마 적용 방법

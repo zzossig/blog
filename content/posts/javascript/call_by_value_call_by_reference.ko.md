@@ -10,7 +10,7 @@ categories:
 -
 libraries:
 - mermaid
-featured_image: feature2/phone.png
+image: images/feature2/phone.png
 ---
 
 ## 이야기는 메모리로부터...

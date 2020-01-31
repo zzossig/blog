@@ -8,7 +8,7 @@ series:
 - docker
 categories:
 - 란?
-featured_image: feature1/docker.png
+image: images/feature1/docker.png
 ---
 
 ## Docker를 이야기 하기 전에

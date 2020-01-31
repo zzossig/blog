@@ -8,7 +8,7 @@ series:
 -
 categories:
 - 란?
-featured_image: feature2/hand-cursor.png
+image: images/feature2/hand-cursor.png
 ---
 
 ## 전역 범위

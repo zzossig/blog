@@ -12,7 +12,7 @@ series:
 -
 categories:
 -
-featured_image: feature4/compass.png
+image: images/feature4/compass.png
 ---
 
 ```html

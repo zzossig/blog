@@ -8,7 +8,7 @@ series:
 - 
 categories:
 - algorithm
-featured_image: feature2/circled-0.png
+image: images/feature2/circled-0.png
 ---
 
 ## 좋은 알고리즘의 기준?

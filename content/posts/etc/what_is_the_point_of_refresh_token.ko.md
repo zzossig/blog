@@ -10,7 +10,7 @@ categories:
 -
 libraries:
 - mermaid
-featured_image: feature2/key.png
+image: images/feature2/key.png
 ---
 
 ## 로그인 구현 뭘로?

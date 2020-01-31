@@ -3,7 +3,7 @@ title: "About"
 date: 2019-12-08T00:00:38+09:00
 type: "about"
 description: 저와 이 블로그에 대해...
-featured_image: feature1/high-importance.png
+image: images/feature1/high-importance.png
 ---
 
 1. **누구**? 웹 개발자입니다.

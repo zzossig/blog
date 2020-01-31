@@ -11,7 +11,7 @@ categories:
 -
 libraries:
 - mermaid
-featured_image: feature3/event-accepted.png
+image: images/feature3/event-accepted.png
 ---
 
 ## 이벤트 발생 순서

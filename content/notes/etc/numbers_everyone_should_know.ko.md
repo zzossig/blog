@@ -9,7 +9,7 @@ series:
 categories:
 -
 enableToc: false
-featured_image: feature2/number.png
+image: images/feature2/number.png
 ---
 
 출처: [http://brenocon.com/dean_perf.html](http://brenocon.com/dean_perf.html)

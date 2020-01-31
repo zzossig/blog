@@ -13,7 +13,7 @@ series:
 -
 categories:
 -
-featured_image: feature5/load.png
+image: images/feature5/load.png
 ---
 
 ## 기존 script 로드방식의 문제점

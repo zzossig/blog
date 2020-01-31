@@ -10,7 +10,7 @@ series:
 - 정규식
 categories:
 -
-featured_image: feature4/group.png
+image: images/feature4/group.png
 ---
 
 ## () 메타문자

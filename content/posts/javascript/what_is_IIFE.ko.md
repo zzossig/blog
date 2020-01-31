@@ -8,7 +8,7 @@ series:
 -
 categories:
 - 란?
-featured_image: feature2/minimum-value.png
+image: images/feature2/minimum-value.png
 ---
 
 {{< boxmd >}}

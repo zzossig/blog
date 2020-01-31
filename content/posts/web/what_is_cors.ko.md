@@ -10,7 +10,7 @@ categories:
 - 란?
 libraries:
 - mermaid
-featured_image: feature3/origin.png
+image: images/feature3/origin.png
 ---
 
 ## CORS에러

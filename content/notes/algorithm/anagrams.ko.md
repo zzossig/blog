@@ -11,7 +11,7 @@ series:
 -
 categories:
 -
-featured_image: feature3/flow-chart.png
+image: images/feature3/flow-chart.png
 ---
 
 {{< boxmd >}}

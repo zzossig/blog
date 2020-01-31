@@ -9,7 +9,7 @@ series:
 categories:
 -
 enableTocContent: 
-featured_image: feature3/align-text-top.png
+image: images/feature3/align-text-top.png
 ---
 
 ## . 와일드카드

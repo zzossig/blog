@@ -8,7 +8,7 @@ series:
 -
 categories:
 -
-featured_image: feature3/three-triangles.png
+image: images/feature3/three-triangles.png
 ---
 
 ## 함수를 호출하는 4가지 방법

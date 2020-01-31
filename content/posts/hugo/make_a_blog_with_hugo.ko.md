@@ -13,7 +13,7 @@ keywords:
 - 휴고
 - hugo theme
 - 휴고 테마
-featured_image: feature1/web.png
+image: images/feature1/web.png
 ---
 
 ## 휴고?

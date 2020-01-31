@@ -9,7 +9,7 @@ series:
 - 
 categories:
 -
-featured_image: feature2/angry-eye.png
+image: images/feature2/angry-eye.png
 ---
 
 참고: [https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Strict_mode](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Strict_mode)

@@ -8,7 +8,7 @@ series:
 - hugo
 categories:
 -
-featured_image: feature1/chat-bubble.png
+image: images/feature1/chat-bubble.png
 ---
 
 ### 🧟제작기간

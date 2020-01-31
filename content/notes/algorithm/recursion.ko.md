@@ -11,7 +11,7 @@ series:
 -
 categories:
 -
-featured_image: feature4/recursion.png
+image: images/feature4/recursion.png
 ---
 
 {{< boxmd >}}

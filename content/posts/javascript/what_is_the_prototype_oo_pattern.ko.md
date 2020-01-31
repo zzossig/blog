@@ -8,7 +8,7 @@ series:
 -
 categories:
 -
-featured_image: feature3/prototype.png
+image: images/feature3/prototype.png
 ---
 
 ## 프로토타입 패턴?

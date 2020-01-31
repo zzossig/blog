@@ -8,7 +8,7 @@ series:
 -
 categories:
 -
-featured_image: feature3/link.png
+image: images/feature3/link.png
 ---
 
 ### 프로토타입 체인
