@@ -6,7 +6,7 @@
     "zzossig"
   ],
   "routes": [
-    { "src": "/404.html", "status": 404}
+    { "src": "/.*", "status": 404, "dest": "404.html" }
   ],
   "redirects": [
     {
