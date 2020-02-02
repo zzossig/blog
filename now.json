@@ -5,6 +5,9 @@
     "zzossig.io",
     "zzossig"
   ],
+  "routes": [
+    { "src": "/404.html", "status": 404}
+  ],
   "redirects": [
     {
       "source": "/ko",
