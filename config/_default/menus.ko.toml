@@ -38,3 +38,9 @@
   name = "쇼케이스"
   url = "showcase"
   weight = 6
+
+[[main]]
+  identifier = "publication"
+  name = "출판"
+  url = "publication"
+  weight = 7
