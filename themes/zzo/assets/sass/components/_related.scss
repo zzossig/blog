@@ -10,6 +10,7 @@
 
   &__title {
     font-size: 32px;
+    
     @include themify($themes) {
       color: themed('related-header-title-color');
     }

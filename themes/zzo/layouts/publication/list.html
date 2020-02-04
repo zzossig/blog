@@ -1,12 +1,10 @@
 {{ define "main" }}
-<main class="main showcase inner" data-sidebar-position="{{ $.Param "sidebarPosition" }}">
-  <section class="showcase__section {{ if .Params.enableBio }}{{ if eq ($.Param "sidebarPosition") "left" }}mr{{ else }}lm{{ end }}{{ else }}lmr{{ end }}">
-    {{ partial "showcase/show-nav" . }}
-    {{ if eq .Permalink .FirstSection.Permalink }}
-      {{ partial "showcase/show-pinned" . }}
-    {{ else }}
-      {{ partial "showcase/show-section" . }}
-    {{ end }}
+<main class="main pub inner" data-sidebar-position="{{ $.Param "sidebarPosition" }}">
+  <section class="pub__section lmr">
+    {{ partial "publication/pub-toolbar" . }}
+    {{ partial "publication/pub-body" . }}
+    <div class="grow"></div>
+    {{ partial "pagination/pagination" . }}
   </section>
   
   {{ partial "script/showcase-script" . }}

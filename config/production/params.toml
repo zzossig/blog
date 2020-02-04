@@ -25,6 +25,7 @@ archivePaginate = 13
 paginateWindow = 1
 talksPaginate = 8
 talksGroupByDate = "2006"
+pubPaginate = 20
 
 # bio, whoami
 myname = "최성환"
