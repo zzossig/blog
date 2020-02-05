@@ -6,19 +6,17 @@
   {{ end }}
   <div class="single">
     <h2 class="single__title">{{ .Title }}</h2>
+    <h6 class="single__shorttitle">{{ .Params.shorttitle }}</h6>
     <div class="single__meta">
-      {{ partial "body/infos" . }}
-      {{ partial "body/tags" . }}
-    </div>    
+      {{ partial "publication/pub-meta" . }}
+    </div>
     <article class="single__contents" data-dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}">
-      {{ partial "body/toc" . }}
+      {{ .Params.abstract }}
       {{ .Content }}
     </article>
     {{ partial "body/share" . }}
     {{ partial "body/donation" . }}
     {{ partial "body/whoami" . }}
-    {{ partial "body/related" . }}
-    {{ partial "pagination/pagination-single" . }}
     {{ partial "comments/comments.html" . }}
     {{ partial "body/photoswipe" . }}
 
@@ -33,61 +31,5 @@
   {{ partial "sidebar/sidebar-single" . }}
 </aside>
 {{ end }}
-<script>
-  {{ $enableToc:= $.Param "enableToc" }}
-  {{ $toc:= $.Param "toc" }}
-  {{ $tocPosition:= $.Param "tocPosition" }}
-
-  var enableToc = JSON.parse({{ $enableToc | jsonify }});
-  var toc = JSON.parse({{ $toc | jsonify }});
-  var tocPosition = JSON.parse({{ $tocPosition | jsonify }});
-  
-  var singleMainElem = document.querySelector('.single__main');
-  var singleSideElem = document.querySelector('.single__side');
-
-  enquire.register("screen and (max-width: 769px)", {
-    match: function () {
-      if ((enableToc || toc) && tocPosition !== "outer") {
-        if (singleMainElem && singleSideElem) {
-          singleMainElem.classList.remove('main-main');
-          singleMainElem.classList.add('main');
-          singleSideElem.classList.remove('main-side');
-          singleSideElem.classList.add('hide');
-        }
-      } else if (tocPosition === "outer") {
-        if (singleMainElem && !singleMainElem.classList.contains('main-main')) {
-          singleMainElem.classList.remove('main-main');
-          singleMainElem.classList.add('main');
-        }
-        if (singleSideElem && !singleSideElem.classList.contains('hide')) {
-          singleSideElem.classList.add('hide');
-        }
-      }
-    },
-    unmatch: function () {
-      if ((enableToc || toc) && tocPosition !== "outer") {
-        singleMainElem.classList.remove('main');
-        singleMainElem.classList.add('main-main');
-        singleSideElem.classList.remove('hide');
-        singleSideElem.classList.add('main-side');
-      } else if (tocPosition === "outer") {
-        if (singleMainElem && !singleMainElem.classList.contains('main-main')) {
-          singleMainElem.classList.remove('main-main');
-          singleMainElem.classList.add('main');
-        }
-        if (singleSideElem && !singleSideElem.classList.contains('hide')) {
-          singleSideElem.classList.add('hide');
-        }
-      }
-
-      document.getElementsByClassName('navbar__burger')[0].classList.remove('is-active');
-      document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
-      document.getElementsByClassName('mobile-search')[0].classList.add('hide');
-    },
-    setup: function () { },
-    deferSetup: true,
-    destroy: function () { },
-  });
-</script>
 {{ partial "script/single-script" . }}
 {{ end }}

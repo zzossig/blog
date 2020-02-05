@@ -18,7 +18,7 @@
     }
   }
 
-  &__body {
+  &__list {
     margin: 1rem 0;
   }
 
@@ -28,5 +28,16 @@
 
     @include flexbox();
     @include flex-direction(column);
+    @include transition(all, 0.2s, ease-in);
+  }
+
+  &__meta {
+    margin: 0 0.25rem;
+    display: inline-block;
+  }
+
+  &__summary {
+    margin-top: 0.75rem;
+    margin-bottom: 1rem;
   }
 }

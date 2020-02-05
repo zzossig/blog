@@ -1,93 +1,18 @@
-{{ $article := 0 }}{{ $book := 0 }}{{ $booklet := 0 }}{{ $conference := 0 }}{{ $inbook := 0 }}{{ $incollection := 0 }}{{ $inproceedings := 0 }}{{ $manual := 0 }}{{ $mastersthesis := 0 }}{{ $misc := 0 }}{{ $phdthesis := 0 }}{{ $proceedings := 0 }}{{ $techreport := 0 }}{{ $unpublished := 0 }}
-{{ range (.Site.GetPage "section" .Type).Pages }}
-  {{ if eq .Params.ENTRYTYPE "article" }}{{ $article = (add $article 1) }}
-  {{ else if eq .Params.ENTRYTYPE "book" }}{{ $book = (add $book 1) }}
-  {{ else if eq .Params.ENTRYTYPE "booklet" }}{{ $booklet = (add $booklet 1) }}
-  {{ else if eq .Params.ENTRYTYPE "conference" }}{{ $conference = (add $conference 1) }}
-  {{ else if eq .Params.ENTRYTYPE "inbook" }}{{ $inbook = (add $inbook 1) }}
-  {{ else if eq .Params.ENTRYTYPE "incollection" }}{{ $incollection = (add $incollection 1) }}
-  {{ else if eq .Params.ENTRYTYPE "inproceedings" }}{{ $inproceedings = (add $inproceedings 1) }}
-  {{ else if eq .Params.ENTRYTYPE "manual" }}{{ $manual = (add $manual 1) }}
-  {{ else if eq .Params.ENTRYTYPE "mastersthesis" }}{{ $mastersthesis = (add $mastersthesis 1) }}
-  {{ else if eq .Params.ENTRYTYPE "misc" }}{{ $misc = (add $misc 1) }}
-  {{ else if eq .Params.ENTRYTYPE "phdthesis" }}{{ $phdthesis = (add $phdthesis 1) }}
-  {{ else if eq .Params.ENTRYTYPE "proceedings" }}{{ $proceedings = (add $proceedings 1) }}
-  {{ else if eq .Params.ENTRYTYPE "techreport" }}{{ $techreport = (add $techreport 1) }}
-  {{ else if eq .Params.ENTRYTYPE "unpublished" }}{{ $unpublished = (add $unpublished 1) }}{{ end }}
-{{ end }}
-
-<div class="showcase__nav">
+{{ $current := . }}
+<nav class="showcase__nav">
   <div class="pub__toolbar--search search">
-    <input aria-label="Publication Search" class="input" type="text" placeholder="{{T "search-placeholder"}}" autocomplete="off"/>
+    <input id="pubSearch" aria-label="Publication Search" class="input" type="text" placeholder="{{T "search-placeholder"}}" autocomplete="off"/>
   </div>
-  {{ if gt $article 0 }}
-    <a href="#article" class="showcase__button" data-meta="{{ $article }}">
-      article
+  <a href="{{ .FirstSection.Permalink }}" class="showcase__button {{ if eq .Permalink .FirstSection.Permalink }}active{{ end }}">
+    {{ i18n "showcase-overview" }}
+  </a>
+  {{ range (.Site.GetPage "section" .Type).Pages }}
+    {{ $active := false }}
+    {{ $active = or $active (eq .Name $current.Title) }}
+    {{ $active = or $active (eq (lower .Permalink) (lower $current.Title)) }}
+    {{ $active = or $active (eq (lower .Permalink) (lower $current.Type)) }}
+    <a href="{{ .Permalink }}" class="showcase__button {{ if $active }}active{{ end }}" data-meta="{{ len .Pages }}">
+      {{ i18n (lower .Title) | default .Title }}
     </a>
   {{ end }}
-  {{ if gt $book 0 }}
-    <a href="#book" class="showcase__button" data-meta="{{ $book }}">
-      book
-    </a>
-  {{ end }}
-  {{ if gt $booklet 0 }}
-    <a href="#booklet" class="showcase__button" data-meta="{{ $booklet }}">
-      booklet
-    </a>
-  {{ end }}
-  {{ if gt $conference 0 }}
-    <a href="#conference" class="showcase__button" data-meta="{{ $conference }}">
-      conference
-    </a>
-  {{ end }}
-  {{ if gt $inbook 0 }}
-    <a href="#inbook" class="showcase__button" data-meta="{{ $inbook }}">
-      inbook
-    </a>
-  {{ end }}
-  {{ if gt $incollection 0 }}
-    <a href="#incollection" class="showcase__button" data-meta="{{ $incollection }}">
-      incollection
-    </a>
-  {{ end }}
-  {{ if gt $inproceedings 0 }}
-    <a href="#inproceedings" class="showcase__button" data-meta="{{ $inproceedings }}">
-      inproceedings
-    </a>
-  {{ end }}
-  {{ if gt $manual 0 }}
-    <a href="#manual" class="showcase__button" data-meta="{{ $manual }}">
-      manual
-    </a>
-  {{ end }}
-  {{ if gt $mastersthesis 0 }}
-    <a href="#mastersthesis" class="showcase__button" data-meta="{{ $mastersthesis }}">
-      mastersthesis
-    </a>
-  {{ end }}
-  {{ if gt $misc 0 }}
-    <a href="#misc" class="showcase__button" data-meta="{{ $misc }}">
-      misc
-    </a>
-  {{ end }}
-  {{ if gt $phdthesis 0 }}
-    <a href="#phdthesis" class="showcase__button" data-meta="{{ $phdthesis }}">
-      phdthesis
-    </a>
-  {{ end }}
-  {{ if gt $proceedings 0 }}
-    <a href="#proceedings" class="showcase__button" data-meta="{{ $proceedings }}">
-      proceedings
-    </a>
-  {{ end }}
-  {{ if gt $techreport 0 }}
-    <a href="#techreport" class="showcase__button" data-meta="{{ $techreport }}">
-      techreport
-    </a>
-  {{ end }}
-  {{ if gt $unpublished 0 }}
-    <a href="#unpublished" class="showcase__button" data-meta="{{ $unpublished }}">
-      unpublished
-    </a>
-  {{ end }}
-</div>
+</nav>
