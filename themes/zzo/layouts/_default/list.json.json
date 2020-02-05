@@ -6,7 +6,8 @@
 {
 	"uri": "{{ $page.Permalink }}",
 	"title": "{{ htmlEscape $page.Title}}",
-	"shorttitle": "{{ htmlEscape $page.Title}}",
+	"shorttitle": "{{ htmlEscape $page.Params.shorttitle}}",
+	"booktitle": "{{ htmlEscape $page.Params.booktitle}}",
 	"tags": [{{ range $tindex, $tag := $page.Params.tags }}{{ if $tindex }}, {{ end }}"{{ $tag| htmlEscape }}"{{ end }}],
 	"authors": "{{ with $page.Params.authors }}{{ delimit . ", " }}{{ end }}",
 	"abstract": "{{ with $page.Params.abstract }}{{ . | markdownify }}{{ end }}",

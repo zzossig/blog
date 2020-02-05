@@ -35,7 +35,7 @@ googleAnalytics = "UA-153642856-1"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
-  section = ["HTML", "JSON", "RSS"]
+  section = ["HTML", "JSON"]
 
 [taxonomies]
   category = "categories"

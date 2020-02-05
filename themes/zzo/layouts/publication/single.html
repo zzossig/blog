@@ -6,9 +6,17 @@
   {{ end }}
   <div class="single">
     <h2 class="single__title">{{ .Title }}</h2>
-    <h6 class="single__shorttitle">{{ .Params.shorttitle }}</h6>
+    {{ with .Params.shorttitle }}
+      <h6 class="single__shorttitle">{{ . }}</h6>
+    {{ end }}
+    {{ with .Params.booktitle }}
+      <h6 class="single__shorttitle">{{ . }}</h6>
+    {{ end }}
     <div class="single__meta">
       {{ partial "publication/pub-meta" . }}
+    </div>
+    <div class="pub__links">
+      {{ partial "publication/pub-links" . }}
     </div>
     <article class="single__contents" data-dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}">
       {{ .Params.abstract }}
@@ -31,5 +39,5 @@
   {{ partial "sidebar/sidebar-single" . }}
 </aside>
 {{ end }}
-{{ partial "script/single-script" . }}
+{{ partial "script/pub-single-script" . }}
 {{ end }}

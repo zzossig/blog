@@ -10,6 +10,11 @@
           - {{ . }}
           </span>
         {{ end }}
+        {{ with .Params.booktitle }}
+          <span class="p2">
+          - {{ . }}
+          </span>
+        {{ end }}
       </a>
       {{ if not .IsNode }}
         <div>
