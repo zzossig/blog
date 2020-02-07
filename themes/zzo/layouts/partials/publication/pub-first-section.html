@@ -1,0 +1,8 @@
+{{ $paginator := .Paginate (where .Pages "Type" .Type) }}
+<div class="pub__overview">
+  {{ range $paginator.Pages }}
+    {{ range .Pages }}
+      {{ .Title }}
+    {{ end }}
+  {{ end }}
+</div>
