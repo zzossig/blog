@@ -8,7 +8,7 @@ series:
 - webpack
 categories:
 - 란?
-image: images/"feature1/webpack.png"
+image: images/feature1/webpack.png
 ---
 
 ## Webpack은 왜 필요할까?
