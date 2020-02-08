@@ -4,47 +4,15 @@
 <script defer src="{{ $fuse.RelPermalink }}"></script>
 
 <script>
-  {{ $permalink := .Permalink }}
-  var permalink = JSON.parse({{ $permalink | jsonify }});
   {{ $enableSearchHighlight := ($.Param "enableSearchHighlight") }}
   var enableSearchHighlight = JSON.parse({{ $enableSearchHighlight | jsonify }});
-
-  var data = null;
-  const options = {
-    limit: 100, // don't return more results than you need!
-    allowTypo: false, // if you don't care about allowing typos
-    threshold: -10000, // don't return bad results
-    keys: ['title', 'abstract'],
-  }
+  {{ $isFirstSection := eq .Permalink .FirstSection.Permalink }}
+  var isFirstSection = JSON.parse({{ $isFirstSection | jsonify }});
   
   document.addEventListener('DOMContentLoaded', function () {
+    var originHtmlText = JSON.stringify(document.querySelector('.pub__ul').innerHTML);
+
     // search
-    var fuse = null;
-
-    (function initFuse() {
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', permalink + "index.json");
-      xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
-      xhr.onload = function () {
-        if (xhr.status === 200) {
-          fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
-            keys: ['title', 'abstract'],
-            includeMatches: enableSearchHighlight,
-            shouldSort: true,
-            threshold: 0.4,
-            location: 0,
-            distance: 100,
-            maxPatternLength: 32,
-            minMatchCharLength: 1,
-          });
-        }
-        else {
-          console.error('[' + xhr.status + ']Error:', xhr.statusText);
-        }
-      };
-      xhr.send();
-    })();
-
     var pubSearch = document.getElementById('pubSearch');
     var pubList = document.querySelector('.pub__list');
     var pubUl = document.querySelector('.pub__ul');
@@ -221,7 +189,7 @@
     pubSearch ?
     pubSearch.addEventListener('input', function(e) {
       var results = fuse.search(e.target.value);
-
+      
       if (enableSearchHighlight) {
         renderSearchHighlightResults(e.target.value, results);
       } else {
@@ -260,9 +228,15 @@
       newUl.setAttribute('class', 'pub__ul');
 
       if (!searchText) {
-        fuse ? fuse.list.forEach(function (item) {
-          makeLi(newUl, item);
-        }) : null;
+        if (isFirstSection) {
+          originUl.innerHTML = JSON.parse(originHtmlText);
+          return null;
+        } else {
+          fuse ? fuse.list.forEach(function (item) {
+            makeLi(newUl, item);
+          }) : null;
+        }
+
         pubResult ? pubResult.setAttribute('data-display', 'none') : null;
         originUl ? originUl.setAttribute('data-display', 'block') : null;
       } else if (results) {

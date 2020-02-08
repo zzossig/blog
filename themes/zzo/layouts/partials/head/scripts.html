@@ -498,6 +498,8 @@
     var enableSearchHighlight = JSON.parse({{ $enableSearchHighlight | jsonify }});
     {{ $searchResultPosition := ($.Param "searchResultPosition") }}
     var searchResultPosition = JSON.parse({{ $searchResultPosition | jsonify }});
+    {{ $sectionType := .Type }}
+    var sectionType = JSON.parse({{ $sectionType | jsonify }});
 
     var fuse = null;
 
@@ -508,7 +510,7 @@
       xhr.onload = function () {
         if (xhr.status === 200) {
           fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
-            keys: ['title', 'description', 'content'],
+            keys: sectionType.includes('publication') ? ['title', 'description', 'content'] : ['title', 'abstract'],
             includeMatches: enableSearchHighlight,
             shouldSort: true,
             threshold: 0.4,
@@ -517,6 +519,7 @@
             maxPatternLength: 32,
             minMatchCharLength: 1,
           });
+          window.fuse = fuse;
         }
         else {
           console.error('[' + xhr.status + ']Error:', xhr.statusText);

@@ -3,7 +3,8 @@
   {{ if eq .Permalink .FirstSection.Permalink }}
     <section class="pub__section lmr">
       {{ partial "publication/pub-toolbar" . }}
-      {{ partial "publication/pub-first-section" . }}
+      {{ partial "publication/pub-overview" . }}
+      {{ partial "script/pub-overview-script" . }}
     </section>
   {{ else }}
     <section class="pub__section lmr">
