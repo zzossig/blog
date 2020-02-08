@@ -15,7 +15,7 @@ homeHeaderType = "text" # text, img, slide
 # body
 enableBreadcrumb = true
 enableSearch = true
-enableSearchHighlight = true
+enableSearchHighlight = false
 enableGoToTop = true
 enableWhoami = true
 summaryShape = "classic" # card, classic, compact
