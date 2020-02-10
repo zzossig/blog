@@ -3,6 +3,7 @@ title: "Resume"
 date: 2020-02-09T20:13:59+09:00
 description: My awesome resume
 type: resume
+draft: true
 enableToc: false
 header:
   image: 
