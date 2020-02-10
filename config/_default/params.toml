@@ -80,7 +80,6 @@ enableComment = false
   twitter = "https://twitter.com/zzossig"
   github = "https://github.com/zzossig/hugo-theme-zzo"
   stack-overflow = "https://stackoverflow.com/users/11747951/zzossig"
-  phone = "tel:+821098871071"
   
 [copyrightOptions]
   enableCopyrightLink = true

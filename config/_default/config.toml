@@ -34,17 +34,25 @@ googleAnalytics = "UA-153642856-1"
     startLevel = 2
 
 [outputs]
-  page = ["HTML", "SearchIndex"]
-  home = ["HTML", "RSS", "SearchIndex"]
-  section = ["HTML", "RSS", "SearchIndex"]
-  taxonomyTerm = ["HTML", "RSS", "SearchIndex"]
-  taxonomy = ["HTML", "RSS", "SearchIndex"]
+  page = ["HTML", "SearchIndex", "AMP"]
+  home = ["HTML", "RSS", "SearchIndex", "AMP"]
+  section = ["HTML", "RSS", "SearchIndex", "AMP"]
+  taxonomyTerm = ["HTML", "RSS", "SearchIndex", "AMP"]
+  taxonomy = ["HTML", "RSS", "SearchIndex", "AMP"]
 
 [outputFormats]
   [outputFormats.SearchIndex]
     mediaType = "application/json"
     baseName = "index"
     isPlainText = true
+    notAlternative = true
+  [outputFormats.AMP]
+    mediaType = "text/html"
+    baseName = "index"
+    isPlainText = false
+    isHTML = true
+    noUgly = false
+    permalinkable = true
     notAlternative = true
 
 [taxonomies]
