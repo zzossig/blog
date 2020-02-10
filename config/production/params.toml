@@ -6,9 +6,9 @@ custom_js = []
 useFaviconGenerator = true # https://www.favicon-generator.org/
 
 themeOptions = ["hacker", "light", "dark", "solarized", "kimbie"]
-notAllowedTypesInHome = ["contact", "talks", "about", "showcase"]
-notAllowedTypesInHomeSidebar = ["about", "archive", "showcase", "gallery"]
-notAllowedTypesInArchive = ["about", "talks", "showcase"]
+notAllowedTypesInHome = ["contact", "talks", "about", "showcase", "publication", "presentation", "resume"]
+notAllowedTypesInHomeSidebar = ["about", "archive", "showcase", "gallery", "publication", "presentation", "resume"]
+notAllowedTypesInArchive = ["about", "talks", "showcase", "publication", "presentation", "resume"]
 
 # header
 homeHeaderType = "text" # text, img, slide
@@ -62,6 +62,7 @@ enableLangChange = true
 enableThemeChange = true
 
 # service
+googleTagManager = "" # GTM-XXXXXX
 baiduAnalytics = ""
 enableBusuanzi = false
 busuanziSiteUV = true

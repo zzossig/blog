@@ -1,6 +1,12 @@
 <footer class="footer">
     {{ partial "footer/select-lang" . }}
     {{ partial "footer/go-to-top" . }}
+
+    <div class="basicflex">
+        {{ range $.Param "footerLinks" }}
+        <a href="{{ .link }}" class="footer__link" target="_blank" rel="noreferrer">{{ .name }}</a>
+        {{ end }}
+    </div>
     
     <div class="footer__poweredby">
     {{ partial "footer/site-counter" . }}

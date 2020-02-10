@@ -5,9 +5,9 @@ useFaviconGenerator = true # https://www.favicon-generator.org/
 meta_image = "/images/whoami/avatar.png"
 
 themeOptions = ["hacker", "light", "dark", "solarized", "kimbie"]
-notAllowedTypesInHome = ["contact", "talks", "about", "showcase", "publication", "presentation"]
-notAllowedTypesInHomeSidebar = ["about", "archive", "showcase", "gallery", "publication", "presentation"]
-notAllowedTypesInArchive = ["about", "talks", "showcase", "publication", "presentation"]
+notAllowedTypesInHome = ["contact", "talks", "about", "showcase", "publication", "presentation", "resume"]
+notAllowedTypesInHomeSidebar = ["about", "archive", "showcase", "gallery", "publication", "presentation", "resume"]
+notAllowedTypesInArchive = ["about", "talks", "showcase", "publication", "presentation", "resume"]
 
 # header
 homeHeaderType = "text" # text, img, slide
@@ -61,6 +61,7 @@ enableLangChange = true
 enableThemeChange = true
 
 # service
+googleTagManager = "" # GTM-XXXXXX
 baiduAnalytics = ""
 enableBusuanzi = false
 busuanziSiteUV = true
@@ -93,3 +94,10 @@ enableComment = false
   bitcoin = ""
   paypal = ""
   patreon = ""
+
+[[footerLinks]]
+  name = ""
+  link = ""
+[[footerLinks]]
+  name = ""
+  link = ""
