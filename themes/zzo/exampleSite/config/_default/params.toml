@@ -6,9 +6,9 @@ custom_js = []
 useFaviconGenerator = true # https://www.favicon-generator.org/
 
 themeOptions = ["dark", "light", "hacker", "solarized", "kimbie"]
-notAllowedTypesInHome = ["contact", "talks", "about", "showcase", "publication", "presentation"]
-notAllowedTypesInHomeSidebar = ["about", "archive", "showcase", "publication", "presentation"]
-notAllowedTypesInArchive = ["about", "talks", "showcase", "publication", "presentation"]
+notAllowedTypesInHome = ["contact", "talks", "about", "showcase", "publication", "presentation", "resume"]
+notAllowedTypesInHomeSidebar = ["about", "archive", "showcase", "publication", "presentation", "resume"]
+notAllowedTypesInArchive = ["about", "talks", "showcase", "publication", "presentation", "resume"]
 
 # header
 homeHeaderType = "text" # text, img, slide
@@ -21,6 +21,7 @@ enableSearchHighlight = true
 enableGoToTop = true
 enableWhoami = true
 summaryShape = "classic" # card, classic, compact
+searchResultPosition = "main" # side, main
 archiveGroupByDate = "2006" # "2006-01": group by month, "2006": group by year
 archivePaginate = 13
 paginateWindow = 1
