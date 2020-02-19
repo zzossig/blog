@@ -4,12 +4,16 @@ description = "The Zzo theme for Hugo example site."
 custom_css = []
 custom_js = []
 useFaviconGenerator = true # https://www.favicon-generator.org/
+meta_image = ""
+themecolor = ""
 
 themeOptions = ["dark", "light", "hacker", "solarized", "kimbie"]
 notAllowedTypesInHome = ["contact", "talks", "about", "showcase", "publication", "presentation", "resume"]
 notAllowedTypesInHomeSidebar = ["about", "archive", "showcase", "publication", "presentation", "resume"]
 notAllowedTypesInArchive = ["about", "talks", "showcase", "publication", "presentation", "resume"]
 notAllowedTypesInHomeFeed = ["about", "archive", "contact", "talks", "showcase", "publication", "presentation", "resume", "gallery"]
+
+enableUiAnimation = true
 
 # header
 homeHeaderType = "text" # text, img, slide
@@ -57,6 +61,7 @@ enableTocSwitch = true
 itemsPerCategory = 5
 sidebarPosition = "right"
 tocLevels = ["h2", "h3", "h4"]
+enableSidebarPostsByOrder = false
 
 # footer
 showPoweredBy = true

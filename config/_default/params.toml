@@ -57,6 +57,7 @@ enableTocSwitch = true
 itemsPerCategory = 5
 sidebarPosition = "left"
 tocLevels = ["h2", "h3", "h4"]
+enableSidebarPostsByOrder = false
 
 # footer
 showPoweredBy = true
