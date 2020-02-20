@@ -17,6 +17,9 @@ enableUiAnimation = true
 # header
 homeHeaderType = "text" # text, img, slide
 
+# menu
+showMobileMenuTerms = ["tags", "categories", "series"]
+
 # body
 enableBreadcrumb = true
 enableSearch = true
