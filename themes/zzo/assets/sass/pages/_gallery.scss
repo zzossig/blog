@@ -114,8 +114,11 @@
       }
     }
 
-    img {
-      object-fit: contain;
+    @media only screen and (max-width: 600px) {
+      img {
+        object-fit: cover;
+        max-height: 300px;
+      }
     }
   }
 }
