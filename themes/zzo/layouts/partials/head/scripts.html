@@ -90,9 +90,11 @@
         if (dataOpen === 'true') {
           navCollapse.setAttribute('data-open', 'false');
           navCollapse.style.maxHeight = 0;
+          navCollapseBtn.classList.remove('is-active');
         } else {
           navCollapse.setAttribute('data-open', 'true');
           navCollapse.style.maxHeight = navCollapse.scrollHeight + "px";
+          navCollapseBtn.classList.add('is-active');
         }
       }
     }) : null;
