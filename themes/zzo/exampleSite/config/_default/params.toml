@@ -170,7 +170,6 @@ commento = false
   dev-to = ""
   gitea = ""
   google-scholar = ""
-  twitch = ""
 
 [donationOptions]
   enable = false
