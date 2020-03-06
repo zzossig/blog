@@ -11,6 +11,7 @@ notAllowedTypesInHomeSidebar = ["about", "archive", "showcase", "gallery", "publ
 notAllowedTypesInArchive = ["about", "talks", "showcase", "publication", "presentation", "resume"]
 notAllowedTypesInHomeFeed = ["about", "archive", "contact", "talks", "showcase", "publication", "presentation", "resume", "gallery"]
 
+viewportSize = "normal" # widest, wider, wide, normal, narrow
 enableUiAnimation = true
 hideSingleContentsWhenJSDisabled = false
 
@@ -19,7 +20,7 @@ homeHeaderType = "text" # text, img, slide
 
 # menu
 showMobileMenuTerms = ["tags", "categories", "series"]
-
+enableSidebarSingle = true
 # body
 enableBreadcrumb = true
 enableSearch = true
