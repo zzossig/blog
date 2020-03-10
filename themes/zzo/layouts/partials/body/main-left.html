@@ -1,5 +1,7 @@
+{{ $padPages := (slice "archive" "post" "page" "tags" "gallery") }}
+
 {{ if eq ($.Param "languagedir") "rtl" }}
-<div class="wrapper__left hide" dir="rtl">
+<div class="wrapper__left hide" data-pad="{{ in $padPages .Type }}" dir="rtl">
   <script>document.querySelector('.wrapper__left').classList.remove('hide')</script>
   {{ if and (eq ($.Param "tocPosition") "outer") .IsPage }}
     {{ if and (ne .Type "about") (ne .Type "contact") (ne .Type "gallery") }}
@@ -20,4 +22,8 @@
     {{ end }}
   {{ end }}
 </div>
+{{ else if and (eq ($.Param "languagedir") "ltr") ($.Param "enableSidebarMenu") }}
+  <div class="wrapper__left" data-pad="{{ in $padPages .Type }}" dir="ltr">
+    
+  </div>
 {{ end }}

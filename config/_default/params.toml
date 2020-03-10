@@ -15,12 +15,15 @@ viewportSize = "normal" # widest, wider, wide, normal, narrow
 enableUiAnimation = true
 hideSingleContentsWhenJSDisabled = false
 
+enableSidebarMenu = true
+
 # header
 homeHeaderType = "text" # text, img, slide
 
 # menu
 showMobileMenuTerms = ["tags", "categories", "series"]
 enableSidebarSingle = true
+
 # body
 enableBreadcrumb = true
 enableSearch = true
