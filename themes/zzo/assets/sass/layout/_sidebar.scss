@@ -45,7 +45,11 @@
   }
 
   &__menu {
-    
+    margin-top: $grid_navbar_height;
+    padding: 0 1rem;
+
+    @include flexbox();
+    @include flex-direction(column);
   }
 }
 
