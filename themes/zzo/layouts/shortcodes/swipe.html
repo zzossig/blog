@@ -1,0 +1,31 @@
+{{ $id := substr (md5 .Inner) 0 16 }}
+<div style="width: 100%;">
+  <div id="{{ $id }}" class="swipe">
+    <div class="swipe-wrap">
+      {{ .Inner }}
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    {{ $options := .Params }}
+    var options = JSON.parse({{ $options | jsonify }});
+    var id = JSON.parse({{ $id | jsonify }});
+    
+    var swipeElem = document.getElementById(id);
+    var swipe = new Swipe(swipeElem,
+      options ? 
+      options : {
+        startSlide: 0,
+        auto: 5000,
+        draggable: true,
+        autoRestart: true,
+        continuous: true,
+        disableScroll: true,
+        stopPropagation: true,
+        callback: function (index, element) { },
+        transitionEnd: function (index, element) { }
+      });
+  });
+</script>

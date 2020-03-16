@@ -16,6 +16,15 @@ categories:
 image: images/feature5/wired-network.png
 ---
 
+{{< swipe item1 >}}
+  {{< swipeItem >}}
+asdasdh
+  {{< /swipeItem >}}
+  {{< swipeItem >}}
+hhhhh
+  {{< /swipeItem >}}
+{{< /swipe >}}
+
 ## 통신규약
 
 프로토콜(Protocol)을 한국어로 번역하면 `통신규약`이 된다. 네트워크를 통해 서로 데이터 패킷을 주고받을 때, 쌍방간에 약속된 데이터 패킷을 주고받기 위해 프로토콜이란 개념이 생겨났다.
