@@ -1,0 +1,25 @@
+{{ $id := substr (md5 .Inner) 0 16 }}
+<a
+  id="{{ $id }}"
+  class="twitter-timeline" 
+  data-theme="{{ .Get "theme" }}"
+  href="{{ .Get "href" }}"
+  {{ with .Get "height" }}data-height="{{ . }}"{{ end }}
+  {{ with .Get "width" }}data-width="{{ . }}"{{ end }}
+  data-chrome="nofooter"
+>
+  {{ .Inner | markdownify }}
+</a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script>
+  var id = JSON.parse({{ $id | jsonify }});
+  var card = document.getElementById(id);
+  var root = document.getElementById('root');
+
+  var themeOption = root.getAttribute('class');
+  if (themeOption.includes('light') || themeOption.includes('solarized')) {
+    card.setAttribute('data-theme', 'light');
+  } else {
+    card.setAttribute('data-theme', 'dark');
+  }
+</script>

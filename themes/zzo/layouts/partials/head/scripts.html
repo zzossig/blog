@@ -529,13 +529,19 @@
           }
         }
 
-        var utterances = document.querySelector('iframe');
+        var utterances = document.getElementById('utterances');
         if (utterances) {
-          utterances.contentWindow.postMessage({
+          utterances.querySelector('iframe').contentWindow.postMessage({
             type: 'set-theme',
             theme: selectedThemeVariant === "dark" || selectedThemeVariant === "hacker" ? 'photon-dark' : selectedThemeVariant === 'kimbie' ? 'github-dark-orange' : 'github-light',
           }, 'https://utteranc.es');
         }
+
+        var twitterCards = document.querySelectorAll('.twitter-timeline');
+        twitterCards ? twitterCards.forEach(function(card) {
+          console.log(selectedThemeVariant);
+          card.setAttribute('data-theme', selectedThemeVariant === 'light' || selectedThemeVariant === 'solarized' ? 'light' : 'dark');
+        }) : null;
       });
     }) : null;
   // ============================================================  
