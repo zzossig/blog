@@ -1,25 +1,50 @@
 {{ $id := substr (md5 .Inner) 0 16 }}
-<a
-  id="{{ $id }}"
-  class="twitter-timeline" 
-  data-theme="{{ .Get "theme" }}"
-  href="{{ .Get "href" }}"
-  {{ with .Get "height" }}data-height="{{ . }}"{{ end }}
-  {{ with .Get "width" }}data-width="{{ . }}"{{ end }}
-  data-chrome="nofooter"
->
-  {{ .Inner | markdownify }}
-</a>
+<div id="{{ $id }}">
+  
+</div>
+
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script>
-  var id = JSON.parse({{ $id | jsonify }});
-  var card = document.getElementById(id);
-  var root = document.getElementById('root');
+  'use strict';
 
-  var themeOption = root.getAttribute('class');
-  if (themeOption.includes('light') || themeOption.includes('solarized')) {
-    card.setAttribute('data-theme', 'light');
-  } else {
-    card.setAttribute('data-theme', 'dark');
+  var id = JSON.parse({{ $id | jsonify }});
+  var root = document.getElementById('root');
+  
+  {{ $href := (.Get "href") }}
+  var href = JSON.parse({{ $href | jsonify }});
+  {{ $height := (.Get "height") }}
+  var height = JSON.parse({{ $height | jsonify }});
+  {{ $width := (.Get "width") }}
+  var width = JSON.parse({{ $width | jsonify }});
+  {{ $inner := .Inner }}
+  var inner = JSON.parse({{ $inner | jsonify }});
+
+  function makeCard() {
+    var card = document.createElement('a');
+    card.setAttribute('class', 'twitter-timeline');
+    card.setAttribute('href', href);
+    card.setAttribute('data-chrome', 'nofooter');
+
+    if (height) {
+      card.setAttribute('data-height', height);
+    }
+    if (width) {
+      card.setAttribute('data-width', width);
+    }
+    if (inner) {
+      card.textContent = inner;
+    }
+
+    var themeOption = root.getAttribute('class');
+    if (themeOption.includes('light') || themeOption.includes('solarized')) {
+      card.setAttribute('data-theme', 'light');
+    } else {
+      card.setAttribute('data-theme', 'dark');
+    }
+
+    document.getElementById(id).appendChild(card);
   }
+
+  makeCard();
+
 </script>
