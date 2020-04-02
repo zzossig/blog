@@ -538,13 +538,15 @@
         }
 
         var twitterCards = document.querySelectorAll('.twitter-timeline');
-        twitterCards ? twitterCards.forEach(function(card) {
-          console.log(selectedThemeVariant);
-          card.setAttribute('data-theme', selectedThemeVariant === 'light' || selectedThemeVariant === 'solarized' ? 'light' : 'dark');
-        }) : null;
+        if (twitterCards) {
+          window.postMessage({
+            type: 'set-twitter-theme',
+            theme: selectedThemeVariant === 'light' || selectedThemeVariant === 'solarized' ? 'light' : 'dark',
+          });
+        }
       });
     }) : null;
-  // ============================================================  
+  // ============================================================
 
 
   // ========================== search ==========================

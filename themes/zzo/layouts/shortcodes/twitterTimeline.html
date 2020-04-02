@@ -3,7 +3,6 @@
   
 </div>
 
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script>
   'use strict';
 
@@ -25,6 +24,10 @@
     card.setAttribute('href', href);
     card.setAttribute('data-chrome', 'nofooter');
 
+    var script = document.createElement('script');
+    script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
+    script.setAttribute('charset', 'utf-8');
+
     if (height) {
       card.setAttribute('data-height', height);
     }
@@ -36,15 +39,28 @@
     }
 
     var themeOption = root.getAttribute('class');
+    
     if (themeOption.includes('light') || themeOption.includes('solarized')) {
       card.setAttribute('data-theme', 'light');
     } else {
       card.setAttribute('data-theme', 'dark');
     }
 
-    document.getElementById(id).appendChild(card);
+    var timeline = document.getElementById(id);
+
+    timeline.innerHTML = '';
+    timeline.appendChild(script);
+    timeline.appendChild(card);
+  }
+
+  var twitterCards = document.querySelectorAll('.twitter-timeline');
+  if (twitterCards) {
+    window.addEventListener('message', function (e) {
+      if (e.data.type === 'set-twitter-theme') {
+        makeCard();
+      }
+    });
   }
 
   makeCard();
-
 </script>
