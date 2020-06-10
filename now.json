@@ -15,11 +15,11 @@
     "enabled": true
   },
   "env": {
-    "HUGO_VERSION": "0.67.1"
+    "HUGO_VERSION": "0.72.0"
   },
   "build": {
     "env": {
-      "HUGO_VERSION": "0.67.1"
+      "HUGO_VERSION": "0.72.0"
     }
   }
 }

@@ -15,6 +15,10 @@ notAllowedTypesInHomeFeed = ["about", "archive", "contact", "talks", "showcase",
 viewportSize = "normal" # widest, wider, wide, normal, narrow
 enableUiAnimation = true
 hideSingleContentsWhenJSDisabled = false
+minItemsToShowInTagCloud = 1 # Minimum items to show in tag cloud
+
+enableSidebarMenu = true
+enablePinnedPosts = true
 
 # header
 homeHeaderType = "text" # text, img, slide
@@ -92,6 +96,8 @@ enableComment = false
 [utterances]       # https://utteranc.es/
   owner = "zzossig"              # Your GitHub ID
   repo = "blog"               # The repo to store comments
+  message = ""      # Optional
+  link = ""         # Optional
 
 [socialOptions]
   email = "mailto:zzossig@gmail.com"
