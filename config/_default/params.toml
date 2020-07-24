@@ -20,7 +20,7 @@ enableSidebarMenu = true
 enablePinnedPosts = true
 
 # header
-homeHeaderType = "text" # text, img, slide
+homeHeaderType = "text" # text, img, slide, typewriter
 
 # menu
 showMobileMenuTerms = ["tags", "categories", "series"]
