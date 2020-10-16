@@ -20,6 +20,10 @@ minItemsToShowInTagCloud = 1 # Minimum items to show in tag cloud
 enableSidebarMenu = true
 enablePinnedPosts = true
 
+# appbar
+enableAppbarSearchIcon = false
+enableAppbarLangIcon = false
+
 # header
 homeHeaderType = "text" # text, img, slide
 hideHomeHeaderWhenMobile = false
