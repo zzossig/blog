@@ -1,0 +1,25 @@
+{
+  "name": "Zzo blog",
+  "version": 2,
+  "alias": [
+    "zzossig.io",
+    "zzossig"
+  ],
+  "redirects": [
+    {
+      "source": "/ko",
+      "destination": "/"
+    }
+  ],
+  "github": {
+    "enabled": true
+  },
+  "env": {
+    "HUGO_VERSION": "0.76.5"
+  },
+  "build": {
+    "env": {
+      "HUGO_VERSION": "0.76.5"
+    }
+  }
+}
