@@ -92,7 +92,7 @@ updateFrequency = ""
 fullContents = false
 
 # comment
-enableComment = false
+enableComment = true
 
 [utterances]       # https://utteranc.es/
   owner = "zzossig"              # Your GitHub ID
