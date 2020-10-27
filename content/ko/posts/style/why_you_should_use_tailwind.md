@@ -1,5 +1,5 @@
 ---
-title: "당신이 TailwindCSS를 써야하는 이유"
+title: "TailwindCSS를 쓰는 이유"
 date: 2020-10-21T09:13:42+09:00
 description: TailwindCSS는 왜쓰는 것일까?
 draft: false
