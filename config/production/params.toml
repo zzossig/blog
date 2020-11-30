@@ -96,13 +96,13 @@ updateFrequency = ""
 fullContents = false
 
 # comment
-enableComment = false
+enableComment = true
 
 [utterances]       # https://utteranc.es/
   owner = "zzossig"              # Your GitHub ID
   repo = "blog"               # The repo to store comments
-  message = ""      # Optional
-  link = ""         # Optional
+  message = "Don't want to use the Utterance bot? Comments can be also placed"      # Optional
+  link = "directly on GitHub"         # Optional
 
 [socialOptions]
   email = "mailto:zzossig@gmail.com"
