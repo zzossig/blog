@@ -30,11 +30,15 @@ hideHomeHeaderWhenMobile = false
 # menu
 showMobileMenuTerms = ["tags", "categories", "series"]
 
+# search
+enableSearch = true
+enableSearchHighlight = true
+searchContent = true # include content to search index
+searchDistance = 100 # fuse option
+
 # body
 enableBreadcrumb = true
 enablePhotoSwipe = true
-enableSearch = true
-enableSearchHighlight = true
 enableGoToTop = true
 enableWhoami = true
 summaryShape = "classic" # card, classic, compact
