@@ -37,6 +37,7 @@ enableSearchHighlight = true
 searchResultPosition = "main" # side, main
 searchContent = true
 searchDistance = 100 # fuse option
+searchThreshold = 0.4 # 0.0: exact match, 1.0: any match
 
 # body
 enableBreadcrumb = true
